@@ -1,0 +1,13 @@
+C:\Users\Lisa Benkhaled\OneDrive - Université Paris-Dauphine\Bureau\Greek-Calculator-main\PricingEngine\bin\Debug\net8.0\PricingEngine.deps.json
+C:\Users\Lisa Benkhaled\OneDrive - Université Paris-Dauphine\Bureau\Greek-Calculator-main\PricingEngine\bin\Debug\net8.0\PricingEngine.dll
+C:\Users\Lisa Benkhaled\OneDrive - Université Paris-Dauphine\Bureau\Greek-Calculator-main\PricingEngine\bin\Debug\net8.0\PricingEngine.pdb
+C:\Users\Lisa Benkhaled\OneDrive - Université Paris-Dauphine\Bureau\Greek-Calculator-main\PricingEngine\bin\Debug\net8.0\PricingEngine.xml
+C:\Users\Lisa Benkhaled\OneDrive - Université Paris-Dauphine\Bureau\Greek-Calculator-main\PricingEngine\obj\Debug\net8.0\PricingEngine.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Lisa Benkhaled\OneDrive - Université Paris-Dauphine\Bureau\Greek-Calculator-main\PricingEngine\obj\Debug\net8.0\PricingEngine.AssemblyInfoInputs.cache
+C:\Users\Lisa Benkhaled\OneDrive - Université Paris-Dauphine\Bureau\Greek-Calculator-main\PricingEngine\obj\Debug\net8.0\PricingEngine.AssemblyInfo.cs
+C:\Users\Lisa Benkhaled\OneDrive - Université Paris-Dauphine\Bureau\Greek-Calculator-main\PricingEngine\obj\Debug\net8.0\PricingEngine.csproj.CoreCompileInputs.cache
+C:\Users\Lisa Benkhaled\OneDrive - Université Paris-Dauphine\Bureau\Greek-Calculator-main\PricingEngine\obj\Debug\net8.0\PricingEngine.dll
+C:\Users\Lisa Benkhaled\OneDrive - Université Paris-Dauphine\Bureau\Greek-Calculator-main\PricingEngine\obj\Debug\net8.0\refint\PricingEngine.dll
+C:\Users\Lisa Benkhaled\OneDrive - Université Paris-Dauphine\Bureau\Greek-Calculator-main\PricingEngine\obj\Debug\net8.0\PricingEngine.xml
+C:\Users\Lisa Benkhaled\OneDrive - Université Paris-Dauphine\Bureau\Greek-Calculator-main\PricingEngine\obj\Debug\net8.0\PricingEngine.pdb
+C:\Users\Lisa Benkhaled\OneDrive - Université Paris-Dauphine\Bureau\Greek-Calculator-main\PricingEngine\obj\Debug\net8.0\ref\PricingEngine.dll

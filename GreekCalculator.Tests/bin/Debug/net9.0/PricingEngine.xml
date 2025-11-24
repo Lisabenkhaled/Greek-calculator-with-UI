@@ -1,0 +1,36 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>PricingEngine</name>
+    </assembly>
+    <members>
+        <member name="T:PricingEngine.Models.TreeParameters">
+            <summary>
+            Stores all parameters needed for building a binomial tree.
+            Can be extended later for trinomial or LR/Cox-Ross-Rubinstein variants.
+            </summary>
+        </member>
+        <!-- Badly formed XML comment ignored for member "T:PricingEngine.Pricing.BinomialTreePricer" -->
+        <member name="M:PricingEngine.Pricing.BlackScholesPricer.Price(PricingEngine.Models.EuropeanOption,PricingEngine.Models.Market)">
+            <summary>
+            Black–Scholes–Merton pricing formula (European only, with dividend yield q)
+            </summary>
+        </member>
+        <member name="T:PricingEngine.Pricing.MonteCarloPricer">
+            <summary>
+            Monte Carlo pricer for European options under Black–Scholes
+            with continuous dividend yield (q).
+            Supports variance reduction via antithetic sampling.
+            </summary>
+        </member>
+        <member name="M:PricingEngine.Pricing.MonteCarloPricer.Price(PricingEngine.Models.EuropeanOption,PricingEngine.Models.Market,System.Int32,System.Boolean)">
+            <summary>
+            Price a European option using classical Monte Carlo.
+            </summary>
+            <param name="opt">European Call/Put</param>
+            <param name="mkt">Market object (S0, r, vol, q)</param>
+            <param name="paths">Number of Monte Carlo simulations</param>
+            <param name="antithetic">Use Antithetic Variance Reduction</param>
+        </member>
+    </members>
+</doc>

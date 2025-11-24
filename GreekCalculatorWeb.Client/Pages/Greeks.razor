@@ -1,0 +1,60 @@
+@page "/greeks"
+@inject HttpClient Http
+
+<h2 class="text-3xl font-semibold mb-6">Calcul des Greeks</h2>
+
+<div class="glass p-6 space-y-6">
+
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+        <input class="input" placeholder="Ticker" @bind="model.Ticker" />
+
+        <input class="input" type="number" placeholder="Spot" @bind="model.Spot" />
+        <input class="input" type="number" placeholder="Strike" @bind="model.Strike" />
+        <input class="input" type="number" placeholder="Vol (%)" @bind="model.Volatility" />
+        <input class="input" type="number" placeholder="Rate (%)" @bind="model.Rate" />
+        <input class="input" type="number" placeholder="Dividend (%)" @bind="model.DividendYield" />
+        <input class="input" type="number" placeholder="Maturity" @bind="model.Maturity" />
+
+        <select class="input" @bind="model.OptionType">
+            <option value="0">Call</option>
+            <option value="1">Put</option>
+        </select>
+
+        <select class="input" @bind="model.GreekMethod">
+            <option value="0">Analytique</option>
+            <option value="1">Finite Diff</option>
+        </select>
+
+        <select class="input" @bind="model.PricingMethod">
+            <option value="0">Black-Scholes</option>
+            <option value="1">Binomial</option>
+            <option value="2">Monte Carlo</option>
+        </select>
+    </div>
+
+    <button class="btn-primary w-full" @onclick="Calculate">
+        Calculer les Greeks
+    </button>
+
+    @if (greeks != null)
+    {
+        <div class="glass p-4 grid grid-cols-2 gap-4 text-lg">
+            <div>Delta : <b>@greeks.Delta</b></div>
+            <div>Gamma : <b>@greeks.Gamma</b></div>
+            <div>Vega : <b>@greeks.Vega</b></div>
+            <div>Theta : <b>@greeks.Theta</b></div>
+            <div>Rho : <b>@greeks.Rho</b></div>
+        </div>
+    }
+</div>
+
+@code {
+    GreeksRequest model = new();
+    GreeksResponse? greeks;
+
+    async Task Calculate()
+    {
+        var response = await Http.PostAsJsonAsync("api/greeks", model);
+        greeks = await response.Content.ReadFromJsonAsync<GreeksResponse>();
+    }
+}

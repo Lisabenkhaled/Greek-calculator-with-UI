@@ -1,0 +1,59 @@
+/Users/lanphuongvu/Greek-Calculator/TestApp/bin/Debug/net9.0/TestApp
+/Users/lanphuongvu/Greek-Calculator/TestApp/bin/Debug/net9.0/TestApp.deps.json
+/Users/lanphuongvu/Greek-Calculator/TestApp/bin/Debug/net9.0/TestApp.runtimeconfig.json
+/Users/lanphuongvu/Greek-Calculator/TestApp/bin/Debug/net9.0/TestApp.dll
+/Users/lanphuongvu/Greek-Calculator/TestApp/bin/Debug/net9.0/TestApp.pdb
+/Users/lanphuongvu/Greek-Calculator/TestApp/bin/Debug/net9.0/PricingEngine.dll
+/Users/lanphuongvu/Greek-Calculator/TestApp/bin/Debug/net9.0/PricingEngine.pdb
+/Users/lanphuongvu/Greek-Calculator/TestApp/bin/Debug/net9.0/PricingEngine.xml
+/Users/lanphuongvu/Greek-Calculator/TestApp/obj/Debug/net9.0/TestApp.csproj.AssemblyReference.cache
+/Users/lanphuongvu/Greek-Calculator/TestApp/obj/Debug/net9.0/TestApp.GeneratedMSBuildEditorConfig.editorconfig
+/Users/lanphuongvu/Greek-Calculator/TestApp/obj/Debug/net9.0/TestApp.AssemblyInfoInputs.cache
+/Users/lanphuongvu/Greek-Calculator/TestApp/obj/Debug/net9.0/TestApp.AssemblyInfo.cs
+/Users/lanphuongvu/Greek-Calculator/TestApp/obj/Debug/net9.0/TestApp.csproj.CoreCompileInputs.cache
+/Users/lanphuongvu/Greek-Calculator/TestApp/obj/Debug/net9.0/TestApp.sourcelink.json
+/Users/lanphuongvu/Greek-Calculator/TestApp/obj/Debug/net9.0/TestApp.csproj.Up2Date
+/Users/lanphuongvu/Greek-Calculator/TestApp/obj/Debug/net9.0/TestApp.dll
+/Users/lanphuongvu/Greek-Calculator/TestApp/obj/Debug/net9.0/refint/TestApp.dll
+/Users/lanphuongvu/Greek-Calculator/TestApp/obj/Debug/net9.0/TestApp.pdb
+/Users/lanphuongvu/Greek-Calculator/TestApp/obj/Debug/net9.0/TestApp.genruntimeconfig.cache
+/Users/lanphuongvu/Greek-Calculator/TestApp/obj/Debug/net9.0/ref/TestApp.dll
+C:/Users/ayate/Downloads/Greek-Calculator/TestApp/bin/Debug/net9.0/TestApp.exe
+C:/Users/ayate/Downloads/Greek-Calculator/TestApp/bin/Debug/net9.0/TestApp.deps.json
+C:/Users/ayate/Downloads/Greek-Calculator/TestApp/bin/Debug/net9.0/TestApp.runtimeconfig.json
+C:/Users/ayate/Downloads/Greek-Calculator/TestApp/bin/Debug/net9.0/TestApp.dll
+C:/Users/ayate/Downloads/Greek-Calculator/TestApp/bin/Debug/net9.0/TestApp.pdb
+C:/Users/ayate/Downloads/Greek-Calculator/TestApp/bin/Debug/net9.0/PricingEngine.dll
+C:/Users/ayate/Downloads/Greek-Calculator/TestApp/bin/Debug/net9.0/PricingEngine.pdb
+C:/Users/ayate/Downloads/Greek-Calculator/TestApp/bin/Debug/net9.0/PricingEngine.xml
+C:/Users/ayate/Downloads/Greek-Calculator/TestApp/obj/Debug/net9.0/TestApp.csproj.AssemblyReference.cache
+C:/Users/ayate/Downloads/Greek-Calculator/TestApp/obj/Debug/net9.0/TestApp.GeneratedMSBuildEditorConfig.editorconfig
+C:/Users/ayate/Downloads/Greek-Calculator/TestApp/obj/Debug/net9.0/TestApp.AssemblyInfoInputs.cache
+C:/Users/ayate/Downloads/Greek-Calculator/TestApp/obj/Debug/net9.0/TestApp.AssemblyInfo.cs
+C:/Users/ayate/Downloads/Greek-Calculator/TestApp/obj/Debug/net9.0/TestApp.csproj.CoreCompileInputs.cache
+C:/Users/ayate/Downloads/Greek-Calculator/TestApp/obj/Debug/net9.0/TestApp.sourcelink.json
+C:/Users/ayate/Downloads/Greek-Calculator/TestApp/obj/Debug/net9.0/TestApp.csproj.Up2Date
+C:/Users/ayate/Downloads/Greek-Calculator/TestApp/obj/Debug/net9.0/TestApp.dll
+C:/Users/ayate/Downloads/Greek-Calculator/TestApp/obj/Debug/net9.0/refint/TestApp.dll
+C:/Users/ayate/Downloads/Greek-Calculator/TestApp/obj/Debug/net9.0/TestApp.pdb
+C:/Users/ayate/Downloads/Greek-Calculator/TestApp/obj/Debug/net9.0/TestApp.genruntimeconfig.cache
+C:/Users/ayate/Downloads/Greek-Calculator/TestApp/obj/Debug/net9.0/ref/TestApp.dll
+C:\Users\Lisa Benkhaled\OneDrive - Université Paris-Dauphine\Bureau\Greek-Calculator-main\TestApp\bin\Debug\net9.0\TestApp.exe
+C:\Users\Lisa Benkhaled\OneDrive - Université Paris-Dauphine\Bureau\Greek-Calculator-main\TestApp\bin\Debug\net9.0\TestApp.deps.json
+C:\Users\Lisa Benkhaled\OneDrive - Université Paris-Dauphine\Bureau\Greek-Calculator-main\TestApp\bin\Debug\net9.0\TestApp.runtimeconfig.json
+C:\Users\Lisa Benkhaled\OneDrive - Université Paris-Dauphine\Bureau\Greek-Calculator-main\TestApp\bin\Debug\net9.0\TestApp.dll
+C:\Users\Lisa Benkhaled\OneDrive - Université Paris-Dauphine\Bureau\Greek-Calculator-main\TestApp\bin\Debug\net9.0\TestApp.pdb
+C:\Users\Lisa Benkhaled\OneDrive - Université Paris-Dauphine\Bureau\Greek-Calculator-main\TestApp\bin\Debug\net9.0\PricingEngine.dll
+C:\Users\Lisa Benkhaled\OneDrive - Université Paris-Dauphine\Bureau\Greek-Calculator-main\TestApp\bin\Debug\net9.0\PricingEngine.pdb
+C:\Users\Lisa Benkhaled\OneDrive - Université Paris-Dauphine\Bureau\Greek-Calculator-main\TestApp\bin\Debug\net9.0\PricingEngine.xml
+C:\Users\Lisa Benkhaled\OneDrive - Université Paris-Dauphine\Bureau\Greek-Calculator-main\TestApp\obj\Debug\net9.0\TestApp.csproj.AssemblyReference.cache
+C:\Users\Lisa Benkhaled\OneDrive - Université Paris-Dauphine\Bureau\Greek-Calculator-main\TestApp\obj\Debug\net9.0\TestApp.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Lisa Benkhaled\OneDrive - Université Paris-Dauphine\Bureau\Greek-Calculator-main\TestApp\obj\Debug\net9.0\TestApp.AssemblyInfoInputs.cache
+C:\Users\Lisa Benkhaled\OneDrive - Université Paris-Dauphine\Bureau\Greek-Calculator-main\TestApp\obj\Debug\net9.0\TestApp.AssemblyInfo.cs
+C:\Users\Lisa Benkhaled\OneDrive - Université Paris-Dauphine\Bureau\Greek-Calculator-main\TestApp\obj\Debug\net9.0\TestApp.csproj.CoreCompileInputs.cache
+C:\Users\Lisa Benkhaled\OneDrive - Université Paris-Dauphine\Bureau\Greek-Calculator-main\TestApp\obj\Debug\net9.0\TestApp.csproj.Up2Date
+C:\Users\Lisa Benkhaled\OneDrive - Université Paris-Dauphine\Bureau\Greek-Calculator-main\TestApp\obj\Debug\net9.0\TestApp.dll
+C:\Users\Lisa Benkhaled\OneDrive - Université Paris-Dauphine\Bureau\Greek-Calculator-main\TestApp\obj\Debug\net9.0\refint\TestApp.dll
+C:\Users\Lisa Benkhaled\OneDrive - Université Paris-Dauphine\Bureau\Greek-Calculator-main\TestApp\obj\Debug\net9.0\TestApp.pdb
+C:\Users\Lisa Benkhaled\OneDrive - Université Paris-Dauphine\Bureau\Greek-Calculator-main\TestApp\obj\Debug\net9.0\TestApp.genruntimeconfig.cache
+C:\Users\Lisa Benkhaled\OneDrive - Université Paris-Dauphine\Bureau\Greek-Calculator-main\TestApp\obj\Debug\net9.0\ref\TestApp.dll

@@ -1,0 +1,46 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>PricingEngine</name>
+    </assembly>
+    <members>
+        <member name="T:PricingEngine.Greeks.AnalyticGreeks">
+            <summary>
+            Black–Scholes–Merton analytic Greeks calculator.
+            Supports European options only.
+            </summary>
+        </member>
+        <member name="T:PricingEngine.Greeks.FiniteDifferenceGreeks">
+            <summary>
+            Finite Difference Greeks calculator.
+            Supports ANY pricing method (BS, Binomial, MC, etc.)
+            </summary>
+        </member>
+        <member name="T:PricingEngine.Greeks.GreekFactory">
+            <summary>
+            Factory to create Greek calculators (Analytic or Finite Difference)
+            using any pricing backend (BS, Binomial, MonteCarlo...)
+            </summary>
+        </member>
+        <member name="T:PricingEngine.Models.TreeParameters">
+            <summary>
+            Stores all parameters needed for building a binomial tree.
+            Can be extended later for trinomial or LR/Cox-Ross-Rubinstein variants.
+            </summary>
+        </member>
+        <member name="T:PricingEngine.Pricing.BinomialTreePricer">
+            <summary>
+            Cox–Ross–Rubinstein (CRR) Binomial Tree Pricer.
+            Uses continuous dividend yield q.
+            Fully compatible with IPayoff and IOptionPricer.
+            </summary>
+        </member>
+        <member name="T:PricingEngine.Pricing.LSMMonteCarloPricer">
+            <summary>
+            Longstaff–Schwartz Monte Carlo (LSM) for American options
+            under Black–Scholes with continuous dividend yield q.
+            </summary>
+        </member>
+        <!-- Badly formed XML comment ignored for member "T:PricingEngine.Pricing.MonteCarloPricer" -->
+    </members>
+</doc>

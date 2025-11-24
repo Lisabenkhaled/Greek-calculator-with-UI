@@ -1,0 +1,42 @@
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.5.2.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GreekCalculatorWeb", "GreekCalculatorWeb\GreekCalculatorWeb.csproj", "{186A3F1F-6F2D-622C-9BDC-1E26336C8BCD}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestApp", "TestApp\TestApp.csproj", "{A0A5516F-CF94-4F6B-6308-242CCA1A71A5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PricingEngine", "PricingEngine\PricingEngine.csproj", "{07FF0F0F-9DCB-6397-52DE-C6AAB39479B3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GreekCalculator.Tests", "GreekCalculator.Tests\GreekCalculator.Tests.csproj", "{64064D4D-D8AC-4C95-CD2F-9C9542CD1A15}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{186A3F1F-6F2D-622C-9BDC-1E26336C8BCD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{186A3F1F-6F2D-622C-9BDC-1E26336C8BCD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{186A3F1F-6F2D-622C-9BDC-1E26336C8BCD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{186A3F1F-6F2D-622C-9BDC-1E26336C8BCD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A0A5516F-CF94-4F6B-6308-242CCA1A71A5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A0A5516F-CF94-4F6B-6308-242CCA1A71A5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A0A5516F-CF94-4F6B-6308-242CCA1A71A5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A0A5516F-CF94-4F6B-6308-242CCA1A71A5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{07FF0F0F-9DCB-6397-52DE-C6AAB39479B3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{07FF0F0F-9DCB-6397-52DE-C6AAB39479B3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{07FF0F0F-9DCB-6397-52DE-C6AAB39479B3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{07FF0F0F-9DCB-6397-52DE-C6AAB39479B3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{64064D4D-D8AC-4C95-CD2F-9C9542CD1A15}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{64064D4D-D8AC-4C95-CD2F-9C9542CD1A15}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{64064D4D-D8AC-4C95-CD2F-9C9542CD1A15}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{64064D4D-D8AC-4C95-CD2F-9C9542CD1A15}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {F80C3AF4-3159-46D5-BF09-B1FCF9F80E69}
+	EndGlobalSection
+EndGlobal

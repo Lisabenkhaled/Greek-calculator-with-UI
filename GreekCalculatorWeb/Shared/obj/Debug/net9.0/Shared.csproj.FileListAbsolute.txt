@@ -1,0 +1,22 @@
+C:\Users\Lisa Benkhaled\OneDrive - Université Paris-Dauphine\Bureau\Greek-Calculator-main\GreekCalculatorWeb\Shared\bin\Debug\net9.0\Shared.deps.json
+C:\Users\Lisa Benkhaled\OneDrive - Université Paris-Dauphine\Bureau\Greek-Calculator-main\GreekCalculatorWeb\Shared\bin\Debug\net9.0\Shared.dll
+C:\Users\Lisa Benkhaled\OneDrive - Université Paris-Dauphine\Bureau\Greek-Calculator-main\GreekCalculatorWeb\Shared\bin\Debug\net9.0\Shared.pdb
+C:\Users\Lisa Benkhaled\OneDrive - Université Paris-Dauphine\Bureau\Greek-Calculator-main\GreekCalculatorWeb\Shared\obj\Debug\net9.0\Shared.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Lisa Benkhaled\OneDrive - Université Paris-Dauphine\Bureau\Greek-Calculator-main\GreekCalculatorWeb\Shared\obj\Debug\net9.0\Shared.AssemblyInfoInputs.cache
+C:\Users\Lisa Benkhaled\OneDrive - Université Paris-Dauphine\Bureau\Greek-Calculator-main\GreekCalculatorWeb\Shared\obj\Debug\net9.0\Shared.AssemblyInfo.cs
+C:\Users\Lisa Benkhaled\OneDrive - Université Paris-Dauphine\Bureau\Greek-Calculator-main\GreekCalculatorWeb\Shared\obj\Debug\net9.0\Shared.csproj.CoreCompileInputs.cache
+C:\Users\Lisa Benkhaled\OneDrive - Université Paris-Dauphine\Bureau\Greek-Calculator-main\GreekCalculatorWeb\Shared\obj\Debug\net9.0\Shared.dll
+C:\Users\Lisa Benkhaled\OneDrive - Université Paris-Dauphine\Bureau\Greek-Calculator-main\GreekCalculatorWeb\Shared\obj\Debug\net9.0\refint\Shared.dll
+C:\Users\Lisa Benkhaled\OneDrive - Université Paris-Dauphine\Bureau\Greek-Calculator-main\GreekCalculatorWeb\Shared\obj\Debug\net9.0\Shared.pdb
+C:\Users\Lisa Benkhaled\OneDrive - Université Paris-Dauphine\Bureau\Greek-Calculator-main\GreekCalculatorWeb\Shared\obj\Debug\net9.0\ref\Shared.dll
+C:\Greek-Calculator-main\GreekCalculatorWeb\Shared\bin\Debug\net9.0\Shared.deps.json
+C:\Greek-Calculator-main\GreekCalculatorWeb\Shared\bin\Debug\net9.0\Shared.dll
+C:\Greek-Calculator-main\GreekCalculatorWeb\Shared\bin\Debug\net9.0\Shared.pdb
+C:\Greek-Calculator-main\GreekCalculatorWeb\Shared\obj\Debug\net9.0\Shared.GeneratedMSBuildEditorConfig.editorconfig
+C:\Greek-Calculator-main\GreekCalculatorWeb\Shared\obj\Debug\net9.0\Shared.AssemblyInfoInputs.cache
+C:\Greek-Calculator-main\GreekCalculatorWeb\Shared\obj\Debug\net9.0\Shared.AssemblyInfo.cs
+C:\Greek-Calculator-main\GreekCalculatorWeb\Shared\obj\Debug\net9.0\Shared.csproj.CoreCompileInputs.cache
+C:\Greek-Calculator-main\GreekCalculatorWeb\Shared\obj\Debug\net9.0\Shared.dll
+C:\Greek-Calculator-main\GreekCalculatorWeb\Shared\obj\Debug\net9.0\refint\Shared.dll
+C:\Greek-Calculator-main\GreekCalculatorWeb\Shared\obj\Debug\net9.0\Shared.pdb
+C:\Greek-Calculator-main\GreekCalculatorWeb\Shared\obj\Debug\net9.0\ref\Shared.dll

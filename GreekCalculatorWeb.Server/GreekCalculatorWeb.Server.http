@@ -1,0 +1,6 @@
+@GreekCalculatorWeb.Server_HostAddress = http://localhost:5103
+
+GET {{GreekCalculatorWeb.Server_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
