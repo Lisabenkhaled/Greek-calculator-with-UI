@@ -52,3 +52,4 @@ C:\Greek-Calculator-main\PricingEngine\obj\Debug\net9.0\refint\PricingEngine.dll
 C:\Greek-Calculator-main\PricingEngine\obj\Debug\net9.0\PricingEngine.xml
 C:\Greek-Calculator-main\PricingEngine\obj\Debug\net9.0\PricingEngine.pdb
 C:\Greek-Calculator-main\PricingEngine\obj\Debug\net9.0\ref\PricingEngine.dll
+C:\Greek-Calculator-main\PricingEngine\obj\Debug\net9.0\PricingEngine.sourcelink.json

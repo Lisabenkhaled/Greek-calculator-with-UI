@@ -20,3 +20,4 @@ C:\Greek-Calculator-main\GreekCalculatorWeb\Shared\obj\Debug\net9.0\Shared.dll
 C:\Greek-Calculator-main\GreekCalculatorWeb\Shared\obj\Debug\net9.0\refint\Shared.dll
 C:\Greek-Calculator-main\GreekCalculatorWeb\Shared\obj\Debug\net9.0\Shared.pdb
 C:\Greek-Calculator-main\GreekCalculatorWeb\Shared\obj\Debug\net9.0\ref\Shared.dll
+C:\Greek-Calculator-main\GreekCalculatorWeb\Shared\obj\Debug\net9.0\Shared.sourcelink.json

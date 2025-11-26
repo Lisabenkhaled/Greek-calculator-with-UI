@@ -78,3 +78,4 @@ C:\Greek-Calculator-main\GreekCalculatorWeb.Server\obj\Debug\net9.0\refint\Greek
 C:\Greek-Calculator-main\GreekCalculatorWeb.Server\obj\Debug\net9.0\GreekCalculatorWeb.Server.pdb
 C:\Greek-Calculator-main\GreekCalculatorWeb.Server\obj\Debug\net9.0\GreekCalculatorWeb.Server.genruntimeconfig.cache
 C:\Greek-Calculator-main\GreekCalculatorWeb.Server\obj\Debug\net9.0\ref\GreekCalculatorWeb.Server.dll
+C:\Greek-Calculator-main\GreekCalculatorWeb.Server\obj\Debug\net9.0\GreekCalculatorWeb.Server.sourcelink.json

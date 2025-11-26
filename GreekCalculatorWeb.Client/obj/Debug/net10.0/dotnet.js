@@ -5,7 +5,7 @@ var e=!1;const t=async()=>WebAssembly.validate(new Uint8Array([0,97,115,109,1,0,
   "mainAssemblyName": "GreekCalculatorWeb.Client",
   "applicationEnvironment": "Development",
   "resources": {
-    "hash": "sha256-9wTGuAPZ9TP7tz6qhSh3n/1cURbnpAyYenJNNjHcxJM=",
+    "hash": "sha256-yjQkQuaCv1Ubvin7tNI8xOFkm2T3SMpEadbKZ6pw0Q8=",
     "jsModuleNative": [
       {
         "name": "dotnet.native.ki06310okv.js"
@@ -1039,25 +1039,25 @@ var e=!1;const t=async()=>WebAssembly.validate(new Uint8Array([0,97,115,109,1,0,
       },
       {
         "virtualPath": "Shared.wasm",
-        "name": "Shared.gnytgtmwi4.wasm",
-        "integrity": "sha256-VKfmD8CbY0L8MkUi02aQZCDD9mhByOYPGhe/giGgEjQ="
+        "name": "Shared.olvste7opb.wasm",
+        "integrity": "sha256-/DP1euj0ElUj9lMKHTOBLKXx+DePMpHkv6/PcyvtmTM="
       },
       {
         "virtualPath": "GreekCalculatorWeb.Client.wasm",
-        "name": "GreekCalculatorWeb.Client.299xxdvabv.wasm",
-        "integrity": "sha256-6s0XA7ExkO/RXYSs5kVg8y/8+1IO+mt+XjLtC69tLtc="
+        "name": "GreekCalculatorWeb.Client.i6cmmsu38p.wasm",
+        "integrity": "sha256-Kk24q60dRU8TN9cbOXyjZlaXyIcsB1+AHIwZjwJqElo="
       }
     ],
     "pdb": [
       {
         "virtualPath": "Shared.pdb",
-        "name": "Shared.3aprs7geiv.pdb",
-        "integrity": "sha256-Ra8NyMSkKtXhL2q7Obcb91PArN9PUNLOS9wePWCa7zk="
+        "name": "Shared.qkhmqs15ap.pdb",
+        "integrity": "sha256-epyIZwm4dX81DjPjVNO+9qs5Aqm1X+f41m7vgUclJkU="
       },
       {
         "virtualPath": "GreekCalculatorWeb.Client.pdb",
-        "name": "GreekCalculatorWeb.Client.h3rh4v6tr5.pdb",
-        "integrity": "sha256-baODqjE6dvBNkQZftdTY6cG11wk1chTZaUySajmwFAw="
+        "name": "GreekCalculatorWeb.Client.1xemdtaztx.pdb",
+        "integrity": "sha256-++nTxnA1KdWPqukAXNbBo8KyZ7HLgiqhcQRfi96i/WY="
       }
     ],
     "libraryInitializers": [

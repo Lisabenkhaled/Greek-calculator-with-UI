@@ -1,67 +1,79 @@
 @page "/pricing"
 @inject HttpClient Http
 
-<h2 class="text-3xl font-bold mb-6">Pricing</h2>
+<h2 class="text-4xl font-bold mb-6 text-center">📈 Pricing</h2>
 
 <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-    <div class="p-6 bg-white rounded-xl shadow">
-        <h3 class="text-xl font-semibold mb-4">Option Data</h3>
+
+    <!-- LEFT CARD -->
+    <div class="p-6 rounded-2xl shadow-lg bg-gradient-to-br from-white to-purple-50 border border-purple-200">
+        <h3 class="text-xl font-semibold mb-4 text-purple-700">Option Data</h3>
 
         <div class="space-y-3">
 
-            <input @bind="Ticker" placeholder="Ticker (AAPL)" class="input" />
-            <input @bind="Spot" placeholder="Spot" class="input" />
-            <input @bind="Strike" placeholder="Strike" class="input" />
-            <input @bind="Vol" placeholder="Vol (0.2)" class="input" />
-            <input @bind="Rate" placeholder="Rate (0.03)" class="input" />
-            <input @bind="Maturity" placeholder="Maturity (years)" class="input" />
+            <input @bind="model.Ticker" placeholder="Ticker (AAPL)" class="input" />
+            <input @bind="model.Spot" type="number" placeholder="Spot price" class="input" />
+            <input @bind="model.Strike" type="number" placeholder="Strike K" class="input" />
+            <input @bind="model.Vol" type="number" placeholder="Volatility σ (0.2)" class="input" />
+            <input @bind="model.Rate" type="number" placeholder="Risk-free rate r (0.03)" class="input" />
+            <input @bind="model.DividendYield" type="number" placeholder="Dividend q (0)" class="input" />
+            <input @bind="model.Maturity" type="number" placeholder="Maturity T (years)" class="input" />
 
-            <select @bind="Method" class="input">
-                <option value="0">Black-Scholes</option>
-                <option value="1">Monte Carlo</option>
-                <option value="2">Binomial</option>
+            <select @bind="model.OptionType" class="input">
+                <option value="0">Call</option>
+                <option value="1">Put</option>
             </select>
+
+            <select @bind="model.OptionStyle" class="input">
+                <option value="0">European</option>
+                <option value="1">American</option>
+            </select>
+
+            <select @bind="model.PricingMethod" class="input">
+                <option value="0">Black-Scholes</option>
+                <option value="1">Binomial</option>
+                <option value="2">Monte Carlo</option>
+                <option value="3">LSM Monte Carlo</option>
+            </select>
+
         </div>
 
-        <button class="btn-primary mt-4" @onclick="Calculate">Calculate</button>
+        <button class="btn-primary mt-4 w-full" @onclick="Calculate">
+            ▶ Compute Price
+        </button>
     </div>
 
-    <div class="p-6 bg-white rounded-xl shadow">
-        <h3 class="text-xl font-semibold mb-4">Résultat</h3>
+    <!-- RIGHT CARD -->
+    <div class="p-6 rounded-2xl shadow-lg bg-gradient-to-br from-white to-blue-50 border border-blue-200">
+        <h3 class="text-xl font-semibold mb-4 text-blue-700">Résultat</h3>
 
         @if (PriceResult is not null)
         {
-            <p class="text-2xl font-bold text-blue-600">💰 @PriceResult</p>
+            <p class="text-3xl font-bold text-blue-600">💰 @PriceResult EUR</p>
         }
         else
         {
-            <p class="text-gray-400">Aucun résultat.</p>
+            <p class="text-gray-400 text-lg">Aucun résultat pour le moment.</p>
         }
     </div>
 </div>
 
 @code {
 
-    string Ticker = "";
-    double Spot, Strike, Vol, Rate, Maturity;
-    int Method = 0;
-
-    double? PriceResult;
+    PricingRequest model = new();
+    double? PriceResult = null;
 
     public async Task Calculate()
     {
-        var req = new
-        {
-            Ticker,
-            Spot,
-            Strike,
-            Vol,
-            Rate,
-            Maturity,
-            Method
-        };
+        var response = await Http.PostAsJsonAsync("api/pricing", model);
 
-        PriceResult = await Http.PostAsJsonAsync("api/pricing", req)
-                                  .Result.Content.ReadFromJsonAsync<double>();
+        if (response.IsSuccessStatusCode)
+        {
+            PriceResult = await response.Content.ReadFromJsonAsync<double>();
+        }
+        else
+        {
+            Console.WriteLine("❌ HTTP Error: " + response.StatusCode);
+        }
     }
 }
