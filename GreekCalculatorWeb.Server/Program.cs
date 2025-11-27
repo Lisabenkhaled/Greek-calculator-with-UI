@@ -32,4 +32,10 @@ app.UseSwaggerUI();
 
 app.MapControllers();
 
+app.MapGet("/", context =>
+{
+    context.Response.Redirect("/swagger", permanent: false);
+    return Task.CompletedTask;
+});
+
 app.Run();
