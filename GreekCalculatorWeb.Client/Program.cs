@@ -3,8 +3,6 @@ using Microsoft.AspNetCore.Components.WebAssembly.Hosting;
 using GreekCalculatorWeb.Client;
 using GreekCalculatorWeb.Client.State;
 
-
-
 namespace GreekCalculatorWeb.Client
 {
     public class Program

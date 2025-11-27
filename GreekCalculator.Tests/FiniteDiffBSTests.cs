@@ -22,7 +22,6 @@ namespace PricingEngine.Tests
                 (o, mk) => BlackScholesPricer.Price((EuropeanOption)o, mk)
             );
 
-            // Tolérances réalistes pour FD (4th order)
             const double TOL_DELTA = 1e-3;
             const double TOL_GAMMA = 1e-3;
             const double TOL_VEGA  = 1e-3;

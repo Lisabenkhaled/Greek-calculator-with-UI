@@ -5,12 +5,6 @@ using static System.Math;
 
 namespace PricingEngine.Pricing
 {
-    /// <summary>
-    /// Monte Carlo pricer for European options under Black–Scholes
-    /// with continuous dividend yield (q).
-    /// Supports antithetic variance reduction.
-    /// Compatible with IPayoff & IOptionPricer.
-    /// </summary>
     public class MonteCarloPricer : IOptionPricer
     {
         private readonly int _paths;
@@ -23,9 +17,6 @@ namespace PricingEngine.Pricing
             _antithetic = antithetic;
         }
 
-        // ============================================================
-        //   INTERFACE METHOD
-        // ============================================================
         public double Price(Option option, Market market)
         {
             if (option.Style != OptionStyle.European)
@@ -33,10 +24,6 @@ namespace PricingEngine.Pricing
 
             return PriceEuropean((EuropeanOption)option, market);
         }
-
-        // ============================================================
-        //   CORE MC PRICING
-        // ============================================================
         private double PriceEuropean(EuropeanOption opt, Market mkt)
         {
             double S0  = mkt.Spot;
@@ -58,7 +45,6 @@ namespace PricingEngine.Pricing
             {
                 double z = NextGaussian();
 
-                // Path 1
                 double ST1 = S0 * Exp(drift + diff * z);
                 double payoff1 = opt.Payoff.Evaluate(ST1);
 
@@ -78,10 +64,6 @@ namespace PricingEngine.Pricing
             double mean = payoffSum / n;
             return Exp(-r * T) * mean;
         }
-
-        // ============================================================
-        //   Gaussian RNG (Box–Muller)
-        // ============================================================
         private static double NextGaussian()
         {
             double u1 = 1.0 - _rng.NextDouble();

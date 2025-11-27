@@ -15,7 +15,6 @@ namespace PricingEngine.Greeks
             double hT = 0.2,
             double hR = 0.01)
         {
-            // Create the correct Greek calculator
             var calculator = GreekFactory.Create(
                 method: greekMethod,
                 pricingMethod: pricingMethod,
@@ -25,7 +24,6 @@ namespace PricingEngine.Greeks
                 hR: hR
             );
 
-            // Compute using analytic or FD implementation
             return calculator.Compute(option, market);
         }
     }

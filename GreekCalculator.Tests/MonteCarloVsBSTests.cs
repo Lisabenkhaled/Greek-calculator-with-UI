@@ -7,8 +7,6 @@ namespace PricingEngine.Tests
 {
     public class MonteCarloVsBSTests
     {
-        // Monte Carlo tolerance depends on #paths.
-        // Because MC error ~ O(1/sqrt(N))
         private const double TOL_MC = 0.05; 
 
         // ================================================================
@@ -33,7 +31,6 @@ namespace PricingEngine.Tests
             Assert.True(Abs(mc - bs) < TOL_MC);
         }
 
-
         // ================================================================
         // 2. MC vs BS — Call, q = 0.03
         // ================================================================
@@ -56,7 +53,6 @@ namespace PricingEngine.Tests
             Assert.True(Abs(mc - bs) < TOL_MC);
         }
 
-
         // ================================================================
         // 3. MC convergence test — error decreases as 1/sqrt(N)
         // ================================================================
@@ -69,7 +65,6 @@ namespace PricingEngine.Tests
 
             double bs = BlackScholesPricer.Price(opt, mkt);
 
-            // Different MC sample sizes
             double mc_20k  = MonteCarloPricer.Price(opt, mkt, paths: 10_000);
             double mc_80k  = MonteCarloPricer.Price(opt, mkt, paths: 80_000);
             double mc_320k = MonteCarloPricer.Price(opt, mkt, paths: 320_000);
@@ -78,15 +73,9 @@ namespace PricingEngine.Tests
             double err_80k  = Abs(mc_80k  - bs);
             double err_320k = Abs(mc_320k - bs);
 
-            // Check error decreases roughly like 1/sqrt(N)
             Assert.True(err_80k  < err_20k);
             Assert.True(err_320k < err_80k);
         }
-
-
-        // ================================================================
-        // 4. Antithetic sampling reduces variance
-        // ================================================================
 
         [Fact]
         public void MonteCarlo_Antithetic_Has_Lower_Variance()
@@ -98,7 +87,7 @@ namespace PricingEngine.Tests
             double sumVarStandard = 0;
             double sumVarAnti = 0;
 
-            // Compare variance across multiple runs
+
             for (int i = 0; i < runs; i++)
             {
                 double mc1 = MonteCarloPricer.Price(opt, mkt, 50_000, antithetic: false);

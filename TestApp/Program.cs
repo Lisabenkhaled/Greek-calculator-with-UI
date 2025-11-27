@@ -10,9 +10,6 @@ namespace TestApp
 {
     class Program
     {
-        // ====================================================================
-        //                           MAIN ENTRY
-        // ====================================================================
         static async Task Main(string[] args)
         {
             Console.OutputEncoding = System.Text.Encoding.UTF8;
@@ -103,11 +100,9 @@ namespace TestApp
 
             Console.WriteLine("\n=== END LIVE PART ===\n\n");
 
-            // ====================================================================
-            //                 TEST PART (STATIC VALUES)
-            // ====================================================================
+
             Console.WriteLine("====================================================");
-            Console.WriteLine("           GREEK CALCULATOR – TEST APP");
+            Console.WriteLine("           GREEK CALCULATOR – TEST STATICS");
             Console.WriteLine("   EU / AM – BS vs Binomial vs Monte Carlo + LSM (AM)");
             Console.WriteLine("====================================================\n");
 
@@ -171,10 +166,6 @@ namespace TestApp
 
             Console.WriteLine("\n=== END OF TESTS ===");
         }
-
-        // ====================================================================
-        //   EUROPEAN PRICE TABLE
-        // ====================================================================
         private static void PrintPriceTableEuropean(EuropeanOption call, EuropeanOption put, Market mkt)
         {
             Console.WriteLine($"Spot={mkt.Spot}, K={call.Strike}, T={call.Maturity}, r={mkt.Rate}, q={mkt.DividendYield}, σ={mkt.Vol}\n");
@@ -195,9 +186,6 @@ namespace TestApp
             Console.WriteLine("{0,-15} {1,15:F6} {2,15:F6}", "Monte Carlo", callMC, putMC);
         }
 
-        // ====================================================================
-        //   AMERICAN PRICE TABLE (with LSM)
-        // ====================================================================
         private static void PrintPriceTableAmerican(AmericanOption call, AmericanOption put, Market mkt)
         {
             Console.WriteLine($"Spot={mkt.Spot}, K={call.Strike}, T={call.Maturity}, r={mkt.Rate}, q={mkt.DividendYield}, σ={mkt.Vol}\n");
@@ -214,9 +202,6 @@ namespace TestApp
             Console.WriteLine("{0,-20} {1,15:F6} {2,15:F6}", "Monte Carlo LSM", callLSM, putLSM);
         }
 
-        // ====================================================================
-        //   EUROPEAN GREEK TABLE
-        // ====================================================================
         private static void PrintGreekTableEuropean(EuropeanOption opt, Market mkt)
         {
             Console.WriteLine($"Option={opt.Type}, Style=European, Spot={mkt.Spot}, K={opt.Strike}, T={opt.Maturity}, r={mkt.Rate}, q={mkt.DividendYield}, σ={mkt.Vol}\n");
@@ -236,9 +221,6 @@ namespace TestApp
             PrintGreekRow("FD + Monte Carlo", gFDMC);
         }
 
-        // ====================================================================
-        //   AMERICAN GREEK TABLE (FD + Binomial + LSM)
-        // ====================================================================
         private static void PrintGreekTableAmerican(AmericanOption opt, Market mkt)
         {
             Console.WriteLine($"Option={opt.Type}, Style=American, Spot={mkt.Spot}, K={opt.Strike}, T={opt.Maturity}, r={mkt.Rate}, q={mkt.DividendYield}, σ={mkt.Vol}\n");
@@ -252,9 +234,6 @@ namespace TestApp
             PrintGreekRow("FD + LSM", gFDLSM);
         }
 
-        // ====================================================================
-        //   COMMON GREEK TABLE HELPERS
-        // ====================================================================
         private static void PrintGreekHeader()
         {
             Console.WriteLine("{0,-22} {1,12} {2,12} {3,12} {4,12} {5,12} {6,12} {7,12} {8,12}",

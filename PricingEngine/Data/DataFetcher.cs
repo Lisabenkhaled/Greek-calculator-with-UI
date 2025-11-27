@@ -16,9 +16,6 @@ namespace PricingEngine.Data
             _apiKey = apiKey;
         }
 
-        // =========================================================================================
-        //  GLOBAL QUOTE (dernier spot disponible)
-        // =========================================================================================
         public async Task<double?> GetSpotAsync(string ticker)
         {
             string url =
@@ -36,13 +33,9 @@ namespace PricingEngine.Data
 
             string strPrice = priceElement.GetString();
 
-            // FIX FORMAT : utiliser point comme séparateur
             return double.Parse(strPrice, CultureInfo.InvariantCulture);
         }
 
-        // =========================================================================================
-        //  3-MONTH TREASURY YIELD (RISK-FREE RATE)
-        // =========================================================================================
         public async Task<double?> GetRiskFreeRateAsync()
         {
             string url =
@@ -59,10 +52,9 @@ namespace PricingEngine.Data
 
             string strValue = latest.GetProperty("value").GetString();
 
-            // FIX FORMAT
             double ratePercent = double.Parse(strValue, CultureInfo.InvariantCulture);
 
-            return ratePercent / 100.0; // convertir % → decimal
+            return ratePercent / 100.0;
         }
     }
 }

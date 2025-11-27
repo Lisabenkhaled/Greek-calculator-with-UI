@@ -35,7 +35,7 @@ namespace PricingEngine.Pricing
                         paths: 200_000,
                         steps: 50),
 
-                _ => throw new NotSupportedException($"Unsupported pricing method {method}")
+                _ => throw new NotSupportedException($"Pricing method {method} is not supported")
             };
         }
     }

@@ -5,10 +5,6 @@ using static System.Math;
 
 namespace PricingEngine.Pricing
 {
-    /// <summary>
-    /// Longstaff–Schwartz Monte Carlo (LSM) for American options
-    /// under Black–Scholes with continuous dividend yield q.
-    /// </summary>
     public class LSMMonteCarloPricer : IOptionPricer
     {
         private readonly int _paths;
@@ -27,10 +23,6 @@ namespace PricingEngine.Pricing
 
             return PriceAmericanLSM(amOpt, mkt);
         }
-
-        // =====================================================
-        //   Longstaff–Schwartz algorithm
-        // =====================================================
         private double PriceAmericanLSM(AmericanOption opt, Market mkt)
         {
             int N = _steps;
@@ -46,11 +38,9 @@ namespace PricingEngine.Pricing
             double drift = (r - q - 0.5 * vol * vol) * dt;
             double diff  = vol * Sqrt(dt);
 
-            // Paths: S[pathIndex, timeIndex]
             double[,] S = new double[M, N + 1];
             var rng = new Random();
 
-            // Generate paths
             for (int i = 0; i < M; i++)
             {
                 S[i, 0] = S0;
@@ -62,15 +52,12 @@ namespace PricingEngine.Pricing
                 }
             }
 
-            // Cashflows at maturity
             double[] cashflow = new double[M];
             for (int i = 0; i < M; i++)
                 cashflow[i] = Intrinsic(opt, S[i, N]);
 
-            // Backward induction: t = N-1 down to 1
             for (int t = N - 1; t >= 1; t--)
             {
-                // 1) Identify ITM paths at time t
                 List<int> itm = new();
                 for (int i = 0; i < M; i++)
                 {
@@ -80,21 +67,18 @@ namespace PricingEngine.Pricing
 
                 if (itm.Count > 0)
                 {
-                    // 2) Build regression dataset for continuation value
                     double[] X = new double[itm.Count];
                     double[] Y = new double[itm.Count];
 
                     for (int k = 0; k < itm.Count; k++)
                     {
                         int i = itm[k];
-                        X[k] = S[i, t];             // stock at time t
-                        Y[k] = cashflow[i] * disc;  // discounted future CF
+                        X[k] = S[i, t];
+                        Y[k] = cashflow[i] * disc;
                     }
 
-                    // 3) Regress: E[CF | S] ≈ a + b S + c S^2
                     (double a, double b, double c) = PolynomialRegression(X, Y);
 
-                    // 4) Decide exercise vs continuation
                     for (int k = 0; k < itm.Count; k++)
                     {
                         int i = itm[k];
@@ -104,30 +88,24 @@ namespace PricingEngine.Pricing
                         double exercise = Intrinsic(opt, St);
 
                         if (exercise > cont)
-                            cashflow[i] = exercise; // exercise now
+                            cashflow[i] = exercise; 
                         else
-                            cashflow[i] = cashflow[i] * disc; // keep discounted future
+                            cashflow[i] = cashflow[i] * disc;
                     }
                 }
                 else
                 {
-                    // No ITM paths => just discount forward CFs
                     for (int i = 0; i < M; i++)
                         cashflow[i] *= disc;
                 }
             }
 
-            // Discount from t=1 to t=0
             double sum = 0.0;
             for (int i = 0; i < M; i++)
                 sum += cashflow[i] * disc;
 
             return sum / M;
         }
-
-        // =====================================================
-        // Helpers
-        // =====================================================
         private static double Intrinsic(Option opt, double S)
         {
             double K = opt.Strike;
@@ -142,8 +120,6 @@ namespace PricingEngine.Pricing
             double u2 = 1.0 - rng.NextDouble();
             return Sqrt(-2.0 * Log(u1)) * Cos(2.0 * PI * u2);
         }
-
-        // Simple 2nd-order polynomial regression: a + b x + c x^2
         private static (double a, double b, double c) PolynomialRegression(double[] X, double[] Y)
         {
             int n = X.Length;
@@ -210,7 +186,6 @@ namespace PricingEngine.Pricing
                      adj[i,1] * B[1] +
                      adj[i,2] * B[2]) * invDet;
             }
-
             return x;
         }
     }

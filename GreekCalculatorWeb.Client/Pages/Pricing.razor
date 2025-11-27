@@ -25,7 +25,7 @@
 
                 @if (isLoading)
                 {
-                    <div class="loading-text">⏳ Chargement données live…</div>
+                    <div class="loading-text"> Chargement données live…</div>
                 }
 
                 @if (errorMessage != null)
@@ -167,7 +167,7 @@
 
     @if (PriceResult is not null && PricingCompatibilityWarning() == null)
     {
-        <p class="result-value">💰 @PriceResult.Value.ToString("F4")</p>
+        <p class="result-value"> @PriceResult.Value.ToString("F4")</p>
     }
     else if (PricingCompatibilityWarning() == null)
     {
@@ -210,7 +210,7 @@
         {
             builder.OpenElement(0, "div");
             builder.AddAttribute(1, "class", "field-error");
-            builder.AddContent(2, $"⚠️ {FieldErrors[key]}");
+            builder.AddContent(2, $" {FieldErrors[key]}");
             builder.CloseElement();
         }
     };
@@ -259,16 +259,16 @@
         if (model.OptionStyle == OptionStyle.American)
         {
             if (model.PricingMethod == PricingMethod.BlackScholes)
-                return "❌ Black-Scholes ne fonctionne pas pour les options américaines.";
+                return " Black-Scholes ne fonctionne pas pour les options américaines !!!";
 
             if (model.PricingMethod == PricingMethod.MonteCarlo)
-                return "❌ Monte Carlo standard ne gère pas l’exercice anticipé.";
+                return " Monte Carlo standard ne gère pas l’exercice anticipé !!!";
         }
 
         if (model.OptionStyle == OptionStyle.European)
         {
             if (model.PricingMethod == PricingMethod.LSMMonteCarlo)
-                return "❌ LSM Monte Carlo est une méthode conçue pour les options américaines uniquement.";
+                return " LSM Monte Carlo est une méthode conçue pour les options américaines uniquement !!!";
         }
 
         return null;

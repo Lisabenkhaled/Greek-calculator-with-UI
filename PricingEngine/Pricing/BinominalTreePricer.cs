@@ -5,11 +5,6 @@ using static System.Math;
 
 namespace PricingEngine.Pricing
 {
-    /// <summary>
-    /// Cox–Ross–Rubinstein (CRR) Binomial Tree Pricer.
-    /// Uses continuous dividend yield q.
-    /// Fully compatible with IPayoff and IOptionPricer.
-    /// </summary>
     public class BinomialTreePricer : IOptionPricer
     {
         private readonly int _steps;
@@ -19,7 +14,6 @@ namespace PricingEngine.Pricing
             _steps = steps;
         }
 
-        // Interface method
         public double Price(Option option, Market market)
         {
             return option.Style switch
@@ -30,10 +24,6 @@ namespace PricingEngine.Pricing
             };
         }
 
-
-        // ============================================================
-        // 1. BUILD PARAMETERS
-        // ============================================================
         public static TreeParameters BuildCRRParameters(Market mkt, double T, int steps)
         {
             var tp = new TreeParameters(steps);
@@ -56,11 +46,6 @@ namespace PricingEngine.Pricing
 
             return tp;
         }
-
-
-        // ============================================================
-        // 2. EUROPEAN OPTION USING PAYOFF INTERFACE
-        // ============================================================
         public static double PriceEuropean(EuropeanOption opt, Market mkt, int steps)
         {
             var tp = BuildCRRParameters(mkt, opt.Maturity, steps);
@@ -73,14 +58,12 @@ namespace PricingEngine.Pricing
 
             double[] values = new double[steps + 1];
 
-            // Terminal payoff using IPayoff
             for (int i = 0; i <= steps; i++)
             {
                 double ST = S0 * Pow(u, steps - i) * Pow(d, i);
                 values[i] = opt.Payoff.Evaluate(ST);
             }
 
-            // Backward induction
             for (int j = steps - 1; j >= 0; j--)
             {
                 for (int i = 0; i <= j; i++)
@@ -92,10 +75,6 @@ namespace PricingEngine.Pricing
             return values[0];
         }
 
-
-        // ============================================================
-        // 3. AMERICAN OPTION USING PAYOFF INTERFACE
-        // ============================================================
         public static double PriceAmerican(AmericanOption opt, Market mkt, int steps)
         {
             var tp = BuildCRRParameters(mkt, opt.Maturity, steps);
@@ -108,14 +87,12 @@ namespace PricingEngine.Pricing
 
             double[] values = new double[steps + 1];
 
-            // Terminal payoff
             for (int i = 0; i <= steps; i++)
             {
                 double ST = S0 * Pow(u, steps - i) * Pow(d, i);
                 values[i] = opt.Payoff.Evaluate(ST);
             }
 
-            // Backward induction with early exercise
             for (int j = steps - 1; j >= 0; j--)
             {
                 for (int i = 0; i <= j; i++)

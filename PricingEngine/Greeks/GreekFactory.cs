@@ -9,11 +9,6 @@ namespace PricingEngine.Greeks
         Analytic,
         FiniteDifference
     }
-
-    /// <summary>
-    /// Factory to create Greek calculators (Analytic or Finite Difference)
-    /// using any pricing backend (BS, Binomial, MonteCarlo...)
-    /// </summary>
     public static class GreekFactory
     {
         public static IGreekCalculator Create(
@@ -26,16 +21,9 @@ namespace PricingEngine.Greeks
         {
             return method switch
             {
-                // ==============================
-                //  ANALYTIC GREEKS (BS only)
-                // ==============================
                 GreekMethod.Analytic =>
                     new AnalyticGreeks(),
 
-
-                // =============================================
-                //  FINITE DIFFERENCE GREEKS (ANY pricing model)
-                // =============================================
                 GreekMethod.FiniteDifference =>
                     new FiniteDifferenceGreeks(
                         pricer: PricerFactory.Create(pricingMethod),

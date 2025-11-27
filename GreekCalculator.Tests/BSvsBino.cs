@@ -14,9 +14,7 @@ namespace PricingEngine.Tests
         private const int N3 = 2000;
         private const int N4 = 5000;
 
-        // ================================================================
-        // CALL — q = 0 — High precision test
-        // ================================================================
+        // CALL — q = 0
         [Fact]
         public void Binomial_Call_NoDividend_HighSteps()
         {
@@ -36,9 +34,7 @@ namespace PricingEngine.Tests
             Assert.True(Abs(b4 - bs) < TOL);
         }
 
-        // ================================================================
-        // PUT — q = 0 — High precision test
-        // ================================================================
+        // PUT — q = 0 
         [Fact]
         public void Binomial_Put_NoDividend_HighSteps()
         {
@@ -58,9 +54,8 @@ namespace PricingEngine.Tests
             Assert.True(Abs(b4 - bs) < TOL);
         }
 
-        // ================================================================
-        // CALL — q = 3% dividend yield — High precision test
-        // ================================================================
+        // CALL — q = 3% dividend yield 
+
         [Fact]
         public void Binomial_Call_WithDividend_HighSteps()
         {
@@ -80,9 +75,8 @@ namespace PricingEngine.Tests
             Assert.True(Abs(b4 - bs) < TOL);
         }
 
-        // ================================================================
-        // PUT — q = 3% dividend yield — High precision test
-        // ================================================================
+        // PUT — q = 3% dividend yield
+        
         [Fact]
         public void Binomial_Put_WithDividend_HighSteps()
         {

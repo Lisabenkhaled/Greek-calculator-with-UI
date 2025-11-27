@@ -8,8 +8,8 @@ namespace PricingEngine.Tests
 {
     public class BlackScholesTests
     {
-        private const double PRICE_TOL = 1e-4;     // pricing tolerance
-        private const double GREEK_TOL = 1e-4;     // Greeks tolerance
+        private const double PRICE_TOL = 1e-4;
+        private const double GREEK_TOL = 1e-4;
 
         [Fact]
         public void BS_Price_Call_NoDividend()

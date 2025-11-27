@@ -5,16 +5,12 @@ using static System.Math;
 
 namespace PricingEngine.Greeks
 {
-    /// <summary>
-    /// Black–Scholes–Merton analytic Greeks calculator.
-    /// Supports European options only.
-    /// </summary>
     public class AnalyticGreeks : IGreekCalculator
     {
         public GreekResult Compute(Option option, Market market)
         {
             if (option is not EuropeanOption eu)
-                throw new NotSupportedException("Analytic Greeks only support European options.");
+                throw new NotSupportedException("Analytic Greeks ne supportent que les options européennes.");
 
             return ComputeInternal(eu, market);
         }
@@ -46,18 +42,14 @@ namespace PricingEngine.Greeks
             double discR = Exp(-r * T);
             double discQ = Exp(-q * T);
 
-            // ===== Delta =====
             double delta = opt.Type == OptionType.Call
                 ? discQ * Nd1
                 : discQ * (Nd1 - 1.0);
 
-            // ===== Gamma =====
             double gamma = discQ * nd1 / (S * sigma * sqrtT);
 
-            // ===== Vega =====
             double vega = S * discQ * nd1 * sqrtT;
 
-            // ===== Theta =====
             double thetaFirst =
                 - S * discQ * nd1 * sigma / (2.0 * sqrtT);
 
@@ -69,25 +61,14 @@ namespace PricingEngine.Greeks
                   + r * K * discR * MathUtil.NormCdf(-d2)
                   - q * S * discQ * MathUtil.NormCdf(-d1);
 
-            // ===== Rho =====
             double rho = opt.Type == OptionType.Call
                 ? K * T * discR * Nd2
                 : -K * T * discR * MathUtil.NormCdf(-d2);
 
-            // ============================================================
-            //   SECOND ORDER GREEKS — ANALYTIC FORMULAS
-            // ============================================================
-
-            // ===== VANNA (cross derivative S-Vol) =====
-            // Formula: Vanna = discQ * nd1 * sqrt(T) * (1 - d1/(sigma*sqrt(T)))
             double vanna = discQ * nd1 * sqrtT * (1 - d1 / (sigma * sqrtT));
 
-            // ===== VOMMA (volga) =====
-            // Vomma = Vega * d1 * d2 / sigma
             double vomma = vega * d1 * d2 / sigma;
 
-            // ===== ZOMMA (dGamma/dVol) =====
-            // Zomma = gamma * (d1 * d2 - 1) / sigma
             double zomma = gamma * (d1 * d2 - 1) / sigma;
 
             return new GreekResult
@@ -97,8 +78,6 @@ namespace PricingEngine.Greeks
                 Vega  = vega,
                 Theta = theta,
                 Rho   = rho,
-
-                // New second-order Greeks
                 Vanna = vanna,
                 Vomma = vomma,
                 Zomma = zomma

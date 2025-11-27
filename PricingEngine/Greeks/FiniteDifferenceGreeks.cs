@@ -5,10 +5,6 @@ using static System.Math;
 
 namespace PricingEngine.Greeks
 {
-    /// <summary>
-    /// Finite Difference Greeks calculator.
-    /// Supports ANY pricing method (BS, Binomial, MC, etc.)
-    /// </summary>
     public class FiniteDifferenceGreeks : IGreekCalculator
     {
         private readonly IOptionPricer _pricer;
@@ -36,14 +32,10 @@ namespace PricingEngine.Greeks
             return ComputeGreeks(option, mkt);
         }
 
-        // ================================================================
-        //   CORE FINITE DIFFERENCE IMPLEMENTATION
-        // ================================================================
         private GreekResult ComputeGreeks(Option opt, Market mkt)
         {
             double V0 = _pricer.Price(opt, mkt);
 
-            // ---------- DELTA ----------
             var mSp = CloneMarket(mkt, spot: mkt.Spot + _hS);
             var mSm = CloneMarket(mkt, spot: mkt.Spot - _hS);
 
@@ -52,7 +44,6 @@ namespace PricingEngine.Greeks
 
             double delta = (fSp - fSm) / (2 * _hS);
 
-            // ---------- GAMMA (5-point stencil) ----------
             var mSp2 = CloneMarket(mkt, spot: mkt.Spot + 2 * _hS);
             var mSm2 = CloneMarket(mkt, spot: mkt.Spot - 2 * _hS);
 
@@ -63,7 +54,6 @@ namespace PricingEngine.Greeks
                 (-fSp2 + 16 * fSp - 30 * V0 + 16 * fSm - fSm2) /
                 (12 * _hS * _hS);
 
-            // ---------- VEGA ----------
             var mVp  = CloneMarket(mkt, vol: mkt.Vol + _hV);
             var mVm  = CloneMarket(mkt, vol: mkt.Vol - _hV);
             var mVp2 = CloneMarket(mkt, vol: mkt.Vol + 2 * _hV);
@@ -78,12 +68,10 @@ namespace PricingEngine.Greeks
                 (-fVp2 + 8 * fVp - 8 * fVm + fVm2) /
                 (12 * _hV);
 
-            // ---------- VOMMA (second derivative wrt Vol) ----------
             double vomma =
                 (-fVp2 + 16 * fVp - 30 * V0 + 16 * fVm - fVm2) /
                 (12 * _hV * _hV);
 
-            // ---------- THETA ----------
             var oTp  = CloneOptionWithMaturity(opt, opt.Maturity + _hT);
             var oTm  = CloneOptionWithMaturity(opt, opt.Maturity - _hT);
             var oTp2 = CloneOptionWithMaturity(opt, opt.Maturity + 2 * _hT);
@@ -98,9 +86,8 @@ namespace PricingEngine.Greeks
                 (-fTp2 + 8 * fTp - 8 * fTm + fTm2) /
                 (12 * _hT);
 
-            double theta = -thetaRaw; // market convention
+            double theta = -thetaRaw; 
 
-            // ---------- RHO ----------
             var mRp  = CloneMarket(mkt, rate: mkt.Rate + _hR);
             var mRm  = CloneMarket(mkt, rate: mkt.Rate - _hR);
             var mRp2 = CloneMarket(mkt, rate: mkt.Rate + 2 * _hR);
@@ -115,11 +102,6 @@ namespace PricingEngine.Greeks
                 (-fRp2 + 8 * fRp - 8 * fRm + fRm2) /
                 (12 * _hR);
 
-            // =====================================================
-            //   SECOND ORDER GREEKS
-            // =====================================================
-
-            // ---------- VANNA (cross derivative S-Vol) ----------
             var mSp_Vp = CloneMarket(mkt, spot: mkt.Spot + _hS, vol: mkt.Vol + _hV);
             var mSm_Vp = CloneMarket(mkt, spot: mkt.Spot - _hS, vol: mkt.Vol + _hV);
             var mSp_Vm = CloneMarket(mkt, spot: mkt.Spot + _hS, vol: mkt.Vol - _hV);
@@ -132,7 +114,6 @@ namespace PricingEngine.Greeks
 
             double vanna = (fSp_Vp - fSm_Vp - fSp_Vm + fSm_Vm) / (4 * _hS * _hV);
 
-            // ---------- ZOMMA (derivative of Gamma wrt Vol) ----------
             double gamma_pV =
                 (
                     -_pricer.Price(opt.Clone(), CloneMarket(mkt, spot: mkt.Spot + 2 * _hS, vol: mkt.Vol + _hV))
@@ -153,9 +134,6 @@ namespace PricingEngine.Greeks
 
             double zomma = (gamma_pV - gamma_mV) / (2 * _hV);
 
-            // =====================================================
-            //   RETURN ALL GREEKS
-            // =====================================================
             return new GreekResult
             {
                 Delta = delta,
@@ -169,10 +147,6 @@ namespace PricingEngine.Greeks
                 Zomma = zomma
             };
         }
-
-        // ================================================================
-        //   HELPERS
-        // ================================================================
         private static Market CloneMarket(Market m,
                                           double? spot = null,
                                           double? vol  = null,

@@ -28,7 +28,7 @@ public class MarketDataService
             Ticker = ticker,
             Spot = spot.Value,
             Rate = rate.Value,
-            Volume = null,   // AlphaVantage VOLUME n’est pas standardisé dans GLOBAL_QUOTE
+            Volume = null, 
             PERatio = null,
             Timestamp = DateTime.Now
         };

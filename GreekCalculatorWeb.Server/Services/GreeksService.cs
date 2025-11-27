@@ -17,10 +17,8 @@ namespace Server.Services
 
         public GreeksResponse ComputeGreeks(GreeksRequest req)
         {
-            // Build option
             var opt = _factory.CreateOptionFromGreeks(req);
 
-            // Build market
             var market = new Market(
                 spot: req.Spot,
                 rate: req.Rate,

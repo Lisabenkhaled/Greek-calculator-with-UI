@@ -10,7 +10,7 @@
 @if (pricing == null)
 {
     <div class="warning-box">
-        ❌ Aucun pricing trouvé.<br />
+        Aucun pricing trouvé !!!<br />
         Veuillez d'abord calculer un prix dans l’onglet <strong>Pricing</strong>.
     </div>
 }
@@ -267,7 +267,7 @@ else
     {
         if (request.OptionStyle == OptionStyle.American &&
             request.GreekMethod == GreekMethod.Analytic)
-            return "❌ Les Greeks analytiques (Black-Scholes) ne sont pas disponibles pour les options américaines.";
+            return " Les Greeks analytiques (Black-Scholes) ne sont pas disponibles pour les options américaines !";
 
         return null;
     }

@@ -11,8 +11,6 @@ namespace PricingEngine.Utils
         {
             return INV_SQRT_2PI * Exp(-0.5 * x * x);
         }
-
-        // High-precision Abramowitz-Stegun CDF approximation (error ~1e-7 to 1e-8)
         public static double NormCdf(double x)
         {
             double sign = 1;

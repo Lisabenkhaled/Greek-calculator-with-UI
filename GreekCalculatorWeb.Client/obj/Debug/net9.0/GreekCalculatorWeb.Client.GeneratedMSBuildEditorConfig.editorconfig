@@ -28,10 +28,6 @@ build_property.EnableCodeStyleSeverity =
 build_metadata.AdditionalFiles.TargetPath = QXBwLnJhem9y
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/lanphuongvu/Greek-calculator-with-UI-1/GreekCalculatorWeb.Client/Pages/Chart.razor]
-build_metadata.AdditionalFiles.TargetPath = UGFnZXMvQ2hhcnQucmF6b3I=
-build_metadata.AdditionalFiles.CssScope = 
-
 [/Users/lanphuongvu/Greek-calculator-with-UI-1/GreekCalculatorWeb.Client/Pages/Greeks.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXMvR3JlZWtzLnJhem9y
 build_metadata.AdditionalFiles.CssScope = 
