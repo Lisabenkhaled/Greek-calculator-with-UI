@@ -111,7 +111,7 @@
             <!-- STYLE -->
             <div class="field">
                 <label>Option Style</label>
-                <select class="input select-black" @bind="model.OptionStyle">
+                <select class="input select-black" value="@model.OptionStyle" @onchange="OnOptionStyleChanged">
                     <option value="@OptionStyle.European">European</option>
                     <option value="@OptionStyle.American">American</option>
                 </select>
@@ -128,7 +128,7 @@
     <div class="pricing-method-grid">
 
         <div class="field">
-            <select class="input select-black" @bind="model.PricingMethod">
+            <select class="input select-black" value="@model.PricingMethod" @onchange="OnPricingMethodChanged">
                 <option value="@PricingMethod.BlackScholes">Black-Scholes</option>
                 <option value="@PricingMethod.Binomial">Binomial Tree</option>
                 <option value="@PricingMethod.MonteCarlo">Monte Carlo</option>
@@ -155,11 +155,11 @@
 <div class="card blue-card result-container">
     <h3 class="card-title blue-title option-title-strong">Résultat</h3>
 
-    @if (PriceResult is not null)
+    @if (PriceResult is not null && PricingCompatibilityWarning() == null)
     {
         <p class="result-value">💰 @PriceResult.Value.ToString("F4")</p>
     }
-    else
+    else if (PricingCompatibilityWarning() == null)
     {
         <p class="result-placeholder">Aucun résultat pour le moment.</p>
     }
@@ -237,6 +237,12 @@
 
             if (model.PricingMethod == PricingMethod.MonteCarlo)
                 return "❌ Monte Carlo standard ne gère pas l’exercice anticipé.";
+        }
+
+        if (model.OptionStyle == OptionStyle.European)
+        {
+            if (model.PricingMethod == PricingMethod.LSMMonteCarlo)
+                return "❌ LSM Monte Carlo est une méthode conçue pour les options américaines uniquement.";
         }
 
         return null;
@@ -350,6 +356,23 @@
             SetError("Dividend", null);
         }
     }
+
+    void OnPricingMethodChanged(ChangeEventArgs e)
+    {
+        if (Enum.TryParse<PricingMethod>(e.Value?.ToString(), out var method))
+            model.PricingMethod = method;
+
+        StateHasChanged(); 
+    }
+
+    void OnOptionStyleChanged(ChangeEventArgs e)
+    {
+        if (Enum.TryParse<OptionStyle>(e.Value?.ToString(), out var style))
+            model.OptionStyle = style;
+
+        StateHasChanged(); 
+    }
+
 
     /* ===========================
      *   CALCULATE
