@@ -20,10 +20,10 @@ namespace TestApp
 
             var fetcher = new DataFetcher("FL1W5JO6O1R8O5MA");
 
-            Console.Write("➡ Entre un ticker (ex: AAPL, TSLA, MSFT…) : ");
+            Console.Write(" Entre un ticker (ex: AAPL, TSLA, MSFT…) : ");
             string ticker = Console.ReadLine().Trim().ToUpper();
 
-            Console.WriteLine("\n⏳ Récupération du spot…");
+            Console.WriteLine("\n Récupération du spot…");
             var spot = await fetcher.GetSpotAsync(ticker);
 
             if (spot == null)
@@ -32,7 +32,7 @@ namespace TestApp
                 return;
             }
 
-            Console.WriteLine("⏳ Récupération du taux sans risque…");
+            Console.WriteLine(" Récupération du taux sans risque…");
             var rf = await fetcher.GetRiskFreeRateAsync();
 
             if (rf == null)
@@ -49,7 +49,7 @@ namespace TestApp
             };
 
             cache.Save();
-            Console.WriteLine("\n✔ Données sauvegardées dans le cache.\n");
+            Console.WriteLine("\n Données sauvegardées dans le cache.\n");
 
             Console.WriteLine("----------------------------------------------------");
             Console.WriteLine($"Ticker Spot = {cache.Spot:F2}");

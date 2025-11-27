@@ -415,7 +415,7 @@
 
             if (!response.IsSuccessStatusCode)
             {
-                errorMessage = "❌ Ticker introuvable.";
+                errorMessage = "Ticker introuvable.";
                 return;
             }
 
@@ -430,7 +430,7 @@
         }
         catch
         {
-            errorMessage = "❌ Erreur API (limite dépassée ou ticker invalide).";
+            errorMessage = "Erreur API (limite dépassée ou ticker invalide).";
         }
         finally
         {
