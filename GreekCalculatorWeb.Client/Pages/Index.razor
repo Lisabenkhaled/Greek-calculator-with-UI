@@ -1,40 +1,122 @@
 @page "/"
-
-<div class="p-10">
-
-    <!-- Welcome Header -->
-    <div class="text-center mb-12">
-        <h1 class="text-5xl font-bold tracking-tight text-gray-900 mb-3">
-            Greek Calculator
-        </h1>
-        <p class="text-gray-500 text-xl">
-            Une plateforme pour calculer prix & greeks d’options vanilles avec plusieurs modèles financiers
-        </p>
-    </div>
-
-    <!-- Feature Grid -->
-    <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mt-10">
-
-        <!-- Pricing -->
-        <a href="/pricing"
-           class="bg-white/70 backdrop-blur-xl rounded-2xl p-8 shadow-md hover:shadow-xl transition transform hover:-translate-y-1">
-            <h2 class="text-2xl font-semibold mb-4"> Option Pricer</h2>
-            <p class="text-gray-500">
-                Calcule le prix d'une option à partir de plusieurs modèles :
-                Black-Scholes, Monte-Carlo, Binomial et LSM Monte Carlo
+ 
+<!-- Fond général avec dégradé doux -->
+<div class="min-h-screen bg-gradient-to-br from-purple-200 via-pink-100 to-blue-100">
+ 
+    <div class="p-10">
+ 
+        <!-- En-tête de page -->
+        <div class="text-center mb-14">
+            <h1 class="text-5xl font-bold tracking-tight text-gray-900 mb-3">
+                Greek Calculator
+            </h1>
+            <p class="text-gray-500 text-xl">
+                Calcul du prix et des sensibilités pour options vanilles.
             </p>
-        </a>
-
-        <!-- Greeks -->
-        <a href="/greeks"
-           class="bg-white/70 backdrop-blur-xl rounded-2xl p-8 shadow-md hover:shadow-xl transition transform hover:-translate-y-1">
-            <h2 class="text-2xl font-semibold mb-4"> Greeks Calculator</h2>
-            <p class="text-gray-500">
-                Obtiens les greeks de premier et second ordre selon deux méthodes
-                numériques & analytiques
-            </p>
-        </a>
-
+        </div>
+ 
+        <!-- Section principale : choix Pricing / Greeks -->
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mt-6">
+ 
+            <!-- Bloc Option Pricer -->
+            <a href="/pricing"
+               class="bg-white/70 backdrop-blur-xl rounded-2xl p-8 shadow-md hover:shadow-xl transition transform hover:-translate-y-1">
+                <h2 class="text-2xl font-bold mb-4">Option Pricer</h2>
+                <p class="text-gray-500">
+                    Calcul du prix d'une option via Black-Scholes, Binomial, Monte Carlo et LSM.
+                </p>
+            </a>
+ 
+            <!-- Bloc Greeks Calculator -->
+            <a href="/greeks"
+               class="bg-white/70 backdrop-blur-xl rounded-2xl p-8 shadow-md hover:shadow-xl transition transform hover:-translate-y-1">
+                <h2 class="text-2xl font-bold mb-4">Greeks Calculator</h2>
+                <p class="text-gray-500">
+                    Calcul des greeks (Δ, Γ, Θ, Vega, Rho…) en méthodes analytiques ou numériques.
+                </p>
+            </a>
+ 
+        </div>
+ 
+        <!-- Section d’aide avec étapes (discrète et secondaire) -->
+        <div class="mt-32 max-w-5xl mx-auto">
+ 
+            <h3 class="text-center text-xl font-bold text-gray-700 mb-10 tracking-wide">
+                Guide utilisateur
+            </h3>
+ 
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+ 
+                <!-- Étape 1 -->
+                <div class="step-card">
+                    <div class="step-title">1. Choisir les données</div>
+                    <ul class="step-list">
+                        <li>Commencer par la section Pricing.</li>
+                        <li>Renseigner un ticker pour importer spot et taux.</li>
+                        <li>Laisser vide pour une saisie manuelle.</li>
+                    </ul>
+                </div>
+ 
+                <!-- Étape 2 -->
+                <div class="step-card">
+                    <div class="step-title">2. Type et modèle</div>
+                    <ul class="step-list">
+                        <li>Sélectionner Call / Put et Européen / Américain.</li>
+                        <li>Choisir la méthode : BS, MC, Binomial, LSM.</li>
+                        <li>Lancer le calcul avec « Calculer Prix ».</li>
+                    </ul>
+                </div>
+ 
+                <!-- Étape 3 -->
+                <div class="step-card">
+                    <div class="step-title">3. Résultats et Greeks</div>
+                    <ul class="step-list">
+                        <li>Le prix s’affiche dans Pricing selon vos paramètres.</li>
+                        <li>Dans Greeks, choisir la méthode (analytique ou FD).</li>
+                        <li>Calculer pour obtenir valeurs et interprétation.</li>
+                    </ul>
+                </div>
+ 
+            </div>
+        </div>
+ 
     </div>
-
 </div>
+ 
+<!-- Styles spécifiques à la section guide -->
+<style>
+    .step-card {
+        padding: 1.4rem 1.6rem;
+        border-radius: 1.2rem;
+        background: #ffffffdd;
+        backdrop-filter: blur(12px);
+        border: 1px solid rgba(196, 181, 253, 0.35);
+        box-shadow: 0 10px 25px rgba(122, 97, 255, 0.12);
+    }
+ 
+    .step-title {
+        font-size: 1.15rem;
+        font-weight: 800;
+        color: #5b1da1;
+        margin-bottom: 0.5rem;
+    }
+ 
+    .step-list {
+        list-style-type: disc;
+        padding-left: 1.3rem;
+        margin-top: 0.3rem;
+        color: #555;
+    }
+ 
+    .step-list li {
+        margin-bottom: 0.4rem;
+        font-size: 0.95rem;
+        line-height: 1.35rem;
+    }
+ 
+    .step-list li::marker {
+        color: #7c3aed;
+    }
+</style>
+ 
+ 
