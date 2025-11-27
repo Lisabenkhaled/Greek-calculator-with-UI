@@ -1,27 +1,37 @@
 using Microsoft.AspNetCore.Mvc;
-using Server.Services;
-
-namespace Server.Controllers;
+using PricingEngine.Data;
+using Shared.DTO;
 
 [ApiController]
-[Route("api/[controller]")]
+[Route("api/market")]
 public class MarketDataController : ControllerBase
 {
-    private readonly MarketDataService _market;
+    private readonly IConfiguration _config;
 
-    public MarketDataController(MarketDataService market)
+    public MarketDataController(IConfiguration config)
     {
-        _market = market;
+        _config = config;
     }
 
     [HttpGet("{ticker}")]
-    public async Task<IActionResult> Get(string ticker)
+    public async Task<ActionResult<MarketDataResponse>> Get(string ticker)
     {
-        var data = await _market.GetLiveMarketData(ticker);
+        var apiKey = _config["AlphaVantage:ApiKey"];
+        var fetcher = new DataFetcher(apiKey);
 
-        if (data == null)
-            return NotFound();
+        var spot = await fetcher.GetSpotAsync(ticker);
 
-        return Ok(data);
+        if (spot is null)
+            return NotFound("Ticker introuvable.");
+
+        var rate = await fetcher.GetRiskFreeRateAsync() ?? 0;
+
+        return Ok(new MarketDataResponse
+        {
+            Ticker = ticker.ToUpper(),
+            Spot = spot.Value,
+            Rate = rate,
+            Timestamp = DateTime.Now
+        });
     }
 }

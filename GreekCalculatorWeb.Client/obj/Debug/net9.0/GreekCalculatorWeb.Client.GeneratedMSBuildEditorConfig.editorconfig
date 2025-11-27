@@ -32,32 +32,16 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = UGFnZXMvQ2hhcnQucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/lanphuongvu/Greek-calculator-with-UI-1/GreekCalculatorWeb.Client/Pages/Counter.razor]
-build_metadata.AdditionalFiles.TargetPath = UGFnZXMvQ291bnRlci5yYXpvcg==
-build_metadata.AdditionalFiles.CssScope = 
-
 [/Users/lanphuongvu/Greek-calculator-with-UI-1/GreekCalculatorWeb.Client/Pages/Greeks.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXMvR3JlZWtzLnJhem9y
-build_metadata.AdditionalFiles.CssScope = 
-
-[/Users/lanphuongvu/Greek-calculator-with-UI-1/GreekCalculatorWeb.Client/Pages/Home.razor]
-build_metadata.AdditionalFiles.TargetPath = UGFnZXMvSG9tZS5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = 
 
 [/Users/lanphuongvu/Greek-calculator-with-UI-1/GreekCalculatorWeb.Client/Pages/Index.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXMvSW5kZXgucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/lanphuongvu/Greek-calculator-with-UI-1/GreekCalculatorWeb.Client/Pages/NotFound.razor]
-build_metadata.AdditionalFiles.TargetPath = UGFnZXMvTm90Rm91bmQucmF6b3I=
-build_metadata.AdditionalFiles.CssScope = 
-
 [/Users/lanphuongvu/Greek-calculator-with-UI-1/GreekCalculatorWeb.Client/Pages/Pricing.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXMvUHJpY2luZy5yYXpvcg==
-build_metadata.AdditionalFiles.CssScope = 
-
-[/Users/lanphuongvu/Greek-calculator-with-UI-1/GreekCalculatorWeb.Client/Pages/Weather.razor]
-build_metadata.AdditionalFiles.TargetPath = UGFnZXMvV2VhdGhlci5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = 
 
 [/Users/lanphuongvu/Greek-calculator-with-UI-1/GreekCalculatorWeb.Client/_Imports.razor]

@@ -19,9 +19,19 @@
             <!-- TICKER -->
             <div class="field">
                 <label>Ticker</label>
-                <input class="input"
-                       value="@TickerText"
-                       @oninput="OnTickerChanged" />
+                <input class="input @(errorMessage!=null ? "input-error" : "")"
+                    value="@TickerInput"
+                    @oninput="OnTickerInputChanged" />
+
+                @if (isLoading)
+                {
+                    <div class="loading-text">⏳ Chargement données live…</div>
+                }
+
+                @if (errorMessage != null)
+                {
+                    <div class="field-error">@errorMessage</div>
+                }
             </div>
 
             <!-- SPOT -->
@@ -166,7 +176,23 @@
 </div>
 
 @code {
+    // ========== LIVE DATA ==========
+    string? errorMessage = null;
+    bool isLoading = false;
 
+    private string _tickerInput;
+    public string TickerInput
+    {
+        get => _tickerInput;
+        set
+        {
+            _tickerInput = value;
+            model.Ticker = value;
+            _ = LoadMarketData(value);   // AUTO-LOAD
+        }
+    }
+
+    
     /* ===========================
      *   VALIDATION & ERRORS
      * =========================== */
@@ -261,10 +287,9 @@
     /* ===========================
      *   INPUT HANDLERS
      * =========================== */
-    void OnTickerChanged(ChangeEventArgs e)
+    void OnTickerInputChanged(ChangeEventArgs e)
     {
-        TickerText = e.Value?.ToString() ?? "";
-        model.Ticker = TickerText;
+        TickerInput = e.Value?.ToString() ?? "";
     }
 
     void OnSpotChanged(ChangeEventArgs e)
@@ -371,6 +396,47 @@
             model.OptionStyle = style;
 
         StateHasChanged(); 
+    }
+    /* ===========================
+     *   LOAD MARKET DATA
+     * =========================== */
+     async Task LoadMarketData(string ticker)
+    {
+        if (string.IsNullOrWhiteSpace(ticker))
+            return;
+
+        isLoading = true;
+        errorMessage = null;
+        StateHasChanged();
+
+        try
+        {
+            var response = await Http.GetAsync($"api/market/{ticker}");
+
+            if (!response.IsSuccessStatusCode)
+            {
+                errorMessage = "❌ Ticker introuvable.";
+                return;
+            }
+
+            var data = await response.Content.ReadFromJsonAsync<MarketDataResponse>();
+
+            // Mise à jour automatique
+            model.Spot = data.Spot;
+            SpotText = data.Spot.ToString("0.####");
+
+            model.Rate = data.Rate;
+            RateText = data.Rate.ToString("0.####");
+        }
+        catch
+        {
+            errorMessage = "❌ Erreur API (limite dépassée ou ticker invalide).";
+        }
+        finally
+        {
+            isLoading = false;
+            StateHasChanged();
+        }
     }
 
 
@@ -513,4 +579,4 @@
     color: #5a189a;
 }
 
-</style>
+</style>.
