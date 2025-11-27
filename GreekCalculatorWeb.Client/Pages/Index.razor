@@ -1,122 +1,124 @@
 @page "/"
- 
-<!-- Fond général avec dégradé doux -->
+
+<!-- Fond général -->
 <div class="min-h-screen bg-gradient-to-br from-purple-200 via-pink-100 to-blue-100">
- 
+
     <div class="p-10">
- 
-        <!-- En-tête de page -->
+
+        <!-- En-tête -->
         <div class="text-center mb-14">
-            <h1 class="text-5xl font-bold tracking-tight text-gray-900 mb-3">
+            <h1 class="text-5xl font-bold tracking-tight mb-3" style="color:#5b1da1;">
                 Greek Calculator
             </h1>
-            <p class="text-gray-500 text-xl">
+            <p class="text-gray-600 text-xl">
                 Calcul du prix et des sensibilités pour options vanilles.
             </p>
         </div>
- 
-        <!-- Section principale : choix Pricing / Greeks -->
+
+        <!-- 2 cards principales -->
         <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mt-6">
- 
-            <!-- Bloc Option Pricer -->
+
             <a href="/pricing"
                class="bg-white/70 backdrop-blur-xl rounded-2xl p-8 shadow-md hover:shadow-xl transition transform hover:-translate-y-1">
-                <h2 class="text-2xl font-bold mb-4">Option Pricer</h2>
-                <p class="text-gray-500">
-                    Calcul du prix d'une option via Black-Scholes, Binomial, Monte Carlo et LSM.
-                </p>
+                <h2 class="text-2xl font-bold mb-4" style="color:#5b1da1;">Option Pricer</h2>
+                <p class="text-gray-600">Calcul du prix via Black-Scholes, Binomial, Monte Carlo et LSM.</p>
             </a>
- 
-            <!-- Bloc Greeks Calculator -->
+
             <a href="/greeks"
                class="bg-white/70 backdrop-blur-xl rounded-2xl p-8 shadow-md hover:shadow-xl transition transform hover:-translate-y-1">
-                <h2 class="text-2xl font-bold mb-4">Greeks Calculator</h2>
-                <p class="text-gray-500">
-                    Calcul des greeks (Δ, Γ, Θ, Vega, Rho…) en méthodes analytiques ou numériques.
-                </p>
+                <h2 class="text-2xl font-bold mb-4" style="color:#5b1da1;">Greeks Calculator</h2>
+                <p class="text-gray-600">Calcul des greeks (Δ, Γ, Θ, Vega, Rho…).</p>
             </a>
- 
+
         </div>
- 
-        <!-- Section d’aide avec étapes (discrète et secondaire) -->
-        <div class="mt-32 max-w-5xl mx-auto">
- 
-            <h3 class="text-center text-xl font-bold text-gray-700 mb-10 tracking-wide">
-                Guide utilisateur
-            </h3>
- 
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
- 
-                <!-- Étape 1 -->
-                <div class="step-card">
-                    <div class="step-title">1. Choisir les données</div>
-                    <ul class="step-list">
-                        <li>Commencer par la section Pricing.</li>
-                        <li>Renseigner un ticker pour importer spot et taux.</li>
-                        <li>Laisser vide pour une saisie manuelle.</li>
-                    </ul>
-                </div>
- 
-                <!-- Étape 2 -->
-                <div class="step-card">
-                    <div class="step-title">2. Type et modèle</div>
-                    <ul class="step-list">
-                        <li>Sélectionner Call / Put et Européen / Américain.</li>
-                        <li>Choisir la méthode : BS, MC, Binomial, LSM.</li>
-                        <li>Lancer le calcul avec « Calculer Prix ».</li>
-                    </ul>
-                </div>
- 
-                <!-- Étape 3 -->
-                <div class="step-card">
-                    <div class="step-title">3. Résultats et Greeks</div>
-                    <ul class="step-list">
-                        <li>Le prix s’affiche dans Pricing selon vos paramètres.</li>
-                        <li>Dans Greeks, choisir la méthode (analytique ou FD).</li>
-                        <li>Calculer pour obtenir valeurs et interprétation.</li>
-                    </ul>
-                </div>
- 
+
+
+        <!-- ================== CARD SEPARÉ POUR LE TITRE ================== -->
+        <div class="max-w-lg mx-auto mt-32">
+
+            <div class="bg-white/90 backdrop-blur-xl p-6 rounded-2xl shadow-lg border border-purple-200/60 text-center">
+
+                <h3 class="text-3xl font-semibold tracking-wide" style="color:#5b1da1;">
+                    <span class="font-extrabold">G</span>uide 
+                    <span class="font-extrabold">U</span>tilisateur
+                </h3>
+
             </div>
+
         </div>
- 
+
+
+        <!-- ================== 3 CARDS SÉPARÉES ================== -->
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-12 mt-14 max-w-6xl mx-auto">
+
+            <!-- Étape 1 -->
+            <div class="step-card">
+                <div class="step-title" style="color:#5b1da1;">1. Choisir les données</div>
+                <ul class="step-list">
+                    <li>Commencer par Pricing.</li>
+                    <li>Entrer un ticker pour importer spot et taux.</li>
+                    <li>Laisser vide pour une saisie manuelle.</li>
+                </ul>
+            </div>
+
+            <!-- Étape 2 -->
+            <div class="step-card">
+                <div class="step-title" style="color:#5b1da1;">2. Type et modèle</div>
+                <ul class="step-list">
+                    <li>Call / Put — Européen / Américain.</li>
+                    <li>Choisir méthode : BS, MC, Binomial, LSM.</li>
+                    <li>Cliquez « Calculer Prix ».</li>
+                </ul>
+            </div>
+
+            <!-- Étape 3 -->
+            <div class="step-card">
+                <div class="step-title" style="color:#5b1da1;">3. Résultats et Greeks</div>
+                <ul class="step-list">
+                    <li>Le prix s’affiche dans Pricing.</li>
+                    <li>Choisir analytique ou FD dans Greeks.</li>
+                    <li>Obtenir les valeurs et l’interprétation.</li>
+                </ul>
+            </div>
+
+        </div>
+
     </div>
 </div>
- 
-<!-- Styles spécifiques à la section guide -->
+
+
+<!-- ================== STYLES ================== -->
 <style>
+
     .step-card {
-        padding: 1.4rem 1.6rem;
+        padding: 1.6rem 1.8rem;
         border-radius: 1.2rem;
         background: #ffffffdd;
         backdrop-filter: blur(12px);
         border: 1px solid rgba(196, 181, 253, 0.35);
         box-shadow: 0 10px 25px rgba(122, 97, 255, 0.12);
     }
- 
+
     .step-title {
         font-size: 1.15rem;
         font-weight: 800;
-        color: #5b1da1;
         margin-bottom: 0.5rem;
+        /* violet utilisé comme référence */
+        color: #5b1da1;
     }
- 
+
     .step-list {
         list-style-type: disc;
         padding-left: 1.3rem;
-        margin-top: 0.3rem;
         color: #555;
     }
- 
+
     .step-list li {
-        margin-bottom: 0.4rem;
+        margin-bottom: 0.45rem;
         font-size: 0.95rem;
-        line-height: 1.35rem;
     }
- 
+
     .step-list li::marker {
         color: #7c3aed;
     }
 </style>
- 
- 

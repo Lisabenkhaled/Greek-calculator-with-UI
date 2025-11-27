@@ -32,8 +32,8 @@ namespace PricingEngine.Pricing
 
                 PricingMethod.LSMMonteCarlo =>
                     new LSMMonteCarloPricer(
-                        paths: 200_000,
-                        steps: 50),
+                        paths: mcPaths,
+                        steps: steps),
 
                 _ => throw new NotSupportedException($"Pricing method {method} is not supported")
             };

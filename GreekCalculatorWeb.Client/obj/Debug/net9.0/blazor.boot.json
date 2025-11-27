@@ -1,7 +1,7 @@
 {
   "mainAssemblyName": "GreekCalculatorWeb.Client",
   "resources": {
-    "hash": "sha256-HPWQAuX3/2b04NSu+u0ri/+JI0XCJhqR1rO3pXRDFAE=",
+    "hash": "sha256-gZJarEGqgkXwdtFiqTLWVMoEZ/GLdcboOT1EDx6XEZI=",
     "fingerprinting": {
       "Microsoft.AspNetCore.Authorization.bpmvnis5p1.wasm": "Microsoft.AspNetCore.Authorization.wasm",
       "Microsoft.AspNetCore.Components.46zr6p1ke0.wasm": "Microsoft.AspNetCore.Components.wasm",
@@ -201,10 +201,10 @@
       "icudt_CJK.tjcz0u77k5.dat": "icudt_CJK.dat",
       "icudt_EFIGS.tptq2av103.dat": "icudt_EFIGS.dat",
       "icudt_no_CJK.lfu7j35m59.dat": "icudt_no_CJK.dat",
-      "Shared.flu0lbbuxi.wasm": "Shared.wasm",
-      "Shared.ptt93as185.pdb": "Shared.pdb",
-      "GreekCalculatorWeb.Client.jzj8s39c2h.wasm": "GreekCalculatorWeb.Client.wasm",
-      "GreekCalculatorWeb.Client.u6dhzv1c3e.pdb": "GreekCalculatorWeb.Client.pdb"
+      "Shared.ajg1nozg3x.wasm": "Shared.wasm",
+      "Shared.8gwrcsu61c.pdb": "Shared.pdb",
+      "GreekCalculatorWeb.Client.22mh7f3dxp.wasm": "GreekCalculatorWeb.Client.wasm",
+      "GreekCalculatorWeb.Client.6sx3zqvazs.pdb": "GreekCalculatorWeb.Client.pdb"
     },
     "jsModuleNative": {
       "dotnet.native.9ih887ebfz.js": "sha256-oS7IRiQoVt9ThQ7Y2UM3XoeY0JqPD02cg9IvRdufn2w="
@@ -414,12 +414,12 @@
       "WindowsBase.vy2l5u79y6.wasm": "sha256-ufB9Mo5joMyUs3DzXWWBFFIZNEVrt6h9N5stYB6Oln4=",
       "mscorlib.xd6mv31d55.wasm": "sha256-1YSLR2eZt3ceALFV//vZUF2AloxVil3VlrW1zZYPSEI=",
       "netstandard.kaml52uspo.wasm": "sha256-HLEwBpLfzKw2/zGSVzHzFJxznCkt/WIjahrziiMrOpA=",
-      "Shared.flu0lbbuxi.wasm": "sha256-4wuqrU7t32YS7rqD/uWTwizD3CCLNhTApq4k4uPRaY4=",
-      "GreekCalculatorWeb.Client.jzj8s39c2h.wasm": "sha256-0dBznwP2+ZWoPVj/quIXu5tbYjzr4mDozgK7+fTMDFo="
+      "Shared.ajg1nozg3x.wasm": "sha256-9hBoavDZy8406H+HoAMrMOIaxzC2syuuEqDoTrdtwEw=",
+      "GreekCalculatorWeb.Client.22mh7f3dxp.wasm": "sha256-FgNF3DLXiayMI8nYMJ68I51OkwHV8BjCp6tCJWdWOqg="
     },
     "pdb": {
-      "Shared.ptt93as185.pdb": "sha256-PUpuXQu1WXUGlQyotjfcd2yitI7r/RbRwPMelRTSNtU=",
-      "GreekCalculatorWeb.Client.u6dhzv1c3e.pdb": "sha256-Bkz8LMf/T5QqZdFfY286DBSFgmoHw9DzqPLDhDtX3uI="
+      "Shared.8gwrcsu61c.pdb": "sha256-CLkLZ+qGpEoQVd5itafWwNjDZ5qrbmdAxvt0zYpdbvc=",
+      "GreekCalculatorWeb.Client.6sx3zqvazs.pdb": "sha256-OheTXWQm5uznGceNcfEdh6n8+Z5byvAMH7o8U0wRGVU="
     }
   },
   "cacheBootResources": true,
