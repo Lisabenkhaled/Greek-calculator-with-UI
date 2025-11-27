@@ -2,66 +2,104 @@
 @using Shared.DTO
 @using Shared.Enums
 @using GreekCalculatorWeb.Client.State
+@using System.Globalization
 @inject HttpClient Http
 @inject AppState AppState
 
-
-
 <h2 class="page-title">OPTION PRICER</h2>
 
-<!-- ======== GRID : MARKET + OPTION ========= -->
 <div class="pricing-grid-2cols">
 
-    <!-- LEFT COLUMN — MARKET -->
+    <!-- =============== LEFT: MARKET =============== -->
     <div class="card violet-card">
         <h3 class="card-title violet-title option-title-strong">Marché Paramètres</h3>
 
         <div class="form-section">
 
+            <!-- TICKER -->
             <div class="field">
                 <label>Ticker</label>
-                <input @bind="model.Ticker" placeholder="AAPL" class="input" />
+                <input class="input"
+                       value="@TickerText"
+                       @oninput="OnTickerChanged" />
             </div>
 
+            <!-- SPOT -->
             <div class="field">
                 <label>Spot</label>
-                <input @bind="model.Spot" type="number" class="input" />
+                <input type="text"
+                       class="input @(HasError("Spot") ? "input-error" : "")"
+                       value="@SpotText"
+                       @oninput="OnSpotChanged" />
+
+                @InlineError("Spot")
             </div>
 
+            <!-- VOLATILITY -->
             <div class="field">
                 <label>Volatilité (décimal)</label>
-                <input @bind="model.Vol" type="number" class="input" />
+                <input type="text"
+                       class="input @(HasError("Vol") ? "input-error" : "")"
+                       value="@VolText"
+                       @oninput="OnVolChanged" />
+
+                @InlineError("Vol")
             </div>
 
+            <!-- RATE -->
             <div class="field">
                 <label>Taux sans risque (décimal)</label>
-                <input @bind="model.Rate" type="number" class="input" />
+                <input type="text"
+                       class="input @(HasError("Rate") ? "input-error" : "")"
+                       value="@RateText"
+                       @oninput="OnRateChanged" />
+
+                @InlineError("Rate")
             </div>
 
         </div>
     </div>
 
-    <!-- RIGHT COLUMN — OPTION -->
+    <!-- =============== RIGHT: OPTION =============== -->
     <div class="card violet-card">
         <h3 class="card-title violet-title option-title-strong">Option Paramètres</h3>
 
         <div class="form-section">
 
+            <!-- STRIKE -->
             <div class="field">
                 <label>Strike (K)</label>
-                <input @bind="model.Strike" type="number" class="input" />
+                <input type="text"
+                       class="input @(HasError("Strike") ? "input-error" : "")"
+                       value="@StrikeText"
+                       @oninput="OnStrikeChanged" />
+
+                @InlineError("Strike")
             </div>
 
+            <!-- MATURITY -->
             <div class="field">
                 <label>Maturité (années)</label>
-                <input @bind="model.Maturity" type="number" class="input" />
+                <input type="text"
+                       class="input @(HasError("Maturity") ? "input-error" : "")"
+                       value="@MaturityText"
+                       @oninput="OnMaturityChanged" />
+
+                @InlineError("Maturity")
             </div>
 
+            <!-- DIVIDEND -->
             <div class="field">
-                <label>Dividend Yield (décimale)</label>
-                <input @bind="model.DividendYield" type="number" class="input" />
+                <label>Dividend Yield</label>
+                <input type="text"
+                       class="input @(HasError("Dividend") ? "input-error" : "")"
+                       value="@DividendText"
+                       @oninput="OnDividendChanged" />
+
+                @InlineError("Dividend")
             </div>
 
+            <!-- TYPE -->
             <div class="field">
                 <label>Option Type</label>
                 <select class="input select-black" @bind="model.OptionType">
@@ -70,11 +108,12 @@
                 </select>
             </div>
 
+            <!-- STYLE -->
             <div class="field">
                 <label>Option Style</label>
                 <select class="input select-black" @bind="model.OptionStyle">
-                    <option value="@OptionStyle.European">Européenne</option>
-                    <option value="@OptionStyle.American">Américaine</option>
+                    <option value="@OptionStyle.European">European</option>
+                    <option value="@OptionStyle.American">American</option>
                 </select>
             </div>
 
@@ -82,7 +121,7 @@
     </div>
 </div>
 
-<!-- ======== PRICING METHOD BLOCK BELOW ======== -->
+<!-- =============== PRICING METHOD =============== -->
 <div class="card violet-card pricing-method-card">
     <h3 class="card-title violet-title option-title-strong">Pricing Méthode</h3>
 
@@ -95,16 +134,24 @@
                 <option value="@PricingMethod.MonteCarlo">Monte Carlo</option>
                 <option value="@PricingMethod.LSMMonteCarlo">LSM Monte Carlo</option>
             </select>
+
+            <!-- WARNING COMBINATION -->
+            @if (PricingCompatibilityWarning() is string warn)
+            {
+                <div class="field-error">@warn</div>
+            }
         </div>
 
-        <button class="btn-primary" @onclick="Calculate">
+        <button class="btn-primary"
+                @onclick="Calculate"
+                disabled="@HasErrors()">
             ▶ Calculer Prix
         </button>
 
     </div>
 </div>
 
-<!-- ======== RESULT BLOCK ======== -->
+<!-- =============== RESULT =============== -->
 <div class="card blue-card result-container">
     <h3 class="card-title blue-title option-title-strong">Résultat</h3>
 
@@ -120,6 +167,48 @@
 
 @code {
 
+    /* ===========================
+     *   VALIDATION & ERRORS
+     * =========================== */
+    Dictionary<string, string?> FieldErrors = new();
+
+    bool HasError(string key)
+        => FieldErrors.TryGetValue(key, out var msg) && msg != null;
+
+    bool HasErrors()
+        => FieldErrors.Values.Any(v => v != null);
+
+    RenderFragment InlineError(string key) => builder =>
+    {
+        if (HasError(key))
+        {
+            builder.OpenElement(0, "div");
+            builder.AddAttribute(1, "class", "field-error");
+            builder.AddContent(2, $"⚠️ {FieldErrors[key]}");
+            builder.CloseElement();
+        }
+    };
+
+    void SetError(string key, string? msg)
+    {
+        FieldErrors[key] = msg;
+        StateHasChanged();
+    }
+
+    /* ===========================
+     *   TEXT FIELDS (STRING INPUT)
+     * =========================== */
+    string TickerText   = "AAPL";
+    string SpotText     = "100";
+    string VolText      = "0.20";
+    string RateText     = "0.05";
+    string StrikeText   = "100";
+    string MaturityText = "1";
+    string DividendText = "0";
+
+    /* ===========================
+     *   MODEL
+     * =========================== */
     PricingRequest model = new()
     {
         Ticker = "AAPL",
@@ -127,48 +216,162 @@
         Strike = 100,
         Vol = 0.20,
         Rate = 0.05,
-        DividendYield = 0.00,
+        DividendYield = 0.0,
         Maturity = 1,
-        OptionType = Shared.Enums.OptionType.Call,
-        OptionStyle = Shared.Enums.OptionStyle.European,
-        PricingMethod = Shared.Enums.PricingMethod.BlackScholes
+        OptionType = OptionType.Call,
+        OptionStyle = OptionStyle.European,
+        PricingMethod = PricingMethod.BlackScholes
     };
 
     double? PriceResult = null;
 
-    public async Task Calculate()
+    /* ===========================
+     *   COMPATIBILITY WARNINGS
+     * =========================== */
+    string? PricingCompatibilityWarning()
     {
-        var response = await Http.PostAsJsonAsync("api/pricing", model);
-
-        if (response.IsSuccessStatusCode)
+        if (model.OptionStyle == OptionStyle.American)
         {
-            PriceResult = await response.Content.ReadFromJsonAsync<double>();
+            if (model.PricingMethod == PricingMethod.BlackScholes)
+                return "❌ Black-Scholes ne fonctionne pas pour les options américaines.";
 
-            AppState.LastPricing = new PricingRequest
-            {
-                Ticker        = model.Ticker,
-                Spot          = model.Spot,
-                Strike        = model.Strike,
-                Vol           = model.Vol,
-                Rate          = model.Rate,
-                DividendYield = model.DividendYield,
-                Maturity      = model.Maturity,
-                OptionType    = model.OptionType,
-                OptionStyle   = model.OptionStyle,
-                PricingMethod = model.PricingMethod
-            };
+            if (model.PricingMethod == PricingMethod.MonteCarlo)
+                return "❌ Monte Carlo standard ne gère pas l’exercice anticipé.";
         }
+
+        return null;
+    }
+
+
+    /* ===========================
+     *   PARSING
+     * =========================== */
+    bool TryParse(string? s, out double value)
+    {
+        s = s?.Replace(",", ".");
+        return double.TryParse(s, NumberStyles.Any, CultureInfo.InvariantCulture, out value);
+    }
+
+    /* ===========================
+     *   INPUT HANDLERS
+     * =========================== */
+    void OnTickerChanged(ChangeEventArgs e)
+    {
+        TickerText = e.Value?.ToString() ?? "";
+        model.Ticker = TickerText;
+    }
+
+    void OnSpotChanged(ChangeEventArgs e)
+    {
+        SpotText = e.Value?.ToString() ?? "";
+
+        if (!TryParse(SpotText, out var v))
+            SetError("Spot", "Numérique invalide");
+        else if (v <= 0)
+            SetError("Spot", "Doit être > 0");
         else
         {
-            Console.WriteLine("❌ HTTP Error: " + response.StatusCode);
+            model.Spot = v;
+            SetError("Spot", null);
         }
-    } 
+    }
 
+    void OnVolChanged(ChangeEventArgs e)
+    {
+        VolText = e.Value?.ToString() ?? "";
+
+        if (!TryParse(VolText, out var v))
+            SetError("Vol", "Numérique invalide");
+        else if (v <= 0)
+            SetError("Vol", "Doit être > 0");
+        else
+        {
+            model.Vol = v;
+            SetError("Vol", null);
+        }
+    }
+
+    void OnRateChanged(ChangeEventArgs e)
+    {
+        RateText = e.Value?.ToString() ?? "";
+
+        if (!TryParse(RateText, out var v))
+            SetError("Rate", "Numérique invalide");
+        else if (v < -0.10)
+            SetError("Rate", "Minimum = -10%");
+        else
+        {
+            model.Rate = v;
+            SetError("Rate", null);
+        }
+    }
+
+    void OnStrikeChanged(ChangeEventArgs e)
+    {
+        StrikeText = e.Value?.ToString() ?? "";
+
+        if (!TryParse(StrikeText, out var v))
+            SetError("Strike", "Numérique invalide");
+        else if (v <= 0)
+            SetError("Strike", "Doit être > 0");
+        else
+        {
+            model.Strike = v;
+            SetError("Strike", null);
+        }
+    }
+
+    void OnMaturityChanged(ChangeEventArgs e)
+    {
+        MaturityText = e.Value?.ToString() ?? "";
+
+        if (!TryParse(MaturityText, out var v))
+            SetError("Maturity", "Numérique invalide");
+        else if (v <= 0)
+            SetError("Maturity", "Doit être > 0");
+        else
+        {
+            model.Maturity = v;
+            SetError("Maturity", null);
+        }
+    }
+
+    void OnDividendChanged(ChangeEventArgs e)
+    {
+        DividendText = e.Value?.ToString() ?? "";
+
+        if (!TryParse(DividendText, out var v))
+            SetError("Dividend", "Numérique invalide");
+        else if (v < 0)
+            SetError("Dividend", "Doit être ≥ 0");
+        else
+        {
+            model.DividendYield = v;
+            SetError("Dividend", null);
+        }
+    }
+
+    /* ===========================
+     *   CALCULATE
+     * =========================== */
+    public async Task Calculate()
+    {
+        if (HasErrors() || PricingCompatibilityWarning() != null)
+            return;
+
+        var r = await Http.PostAsJsonAsync("api/pricing", model);
+
+        if (r.IsSuccessStatusCode)
+        {
+            PriceResult = await r.Content.ReadFromJsonAsync<double>();
+            AppState.LastPricing = model;
+        }
+    }
 }
 
 <style>
 
-/* ---- PAGE TITLE ---- */
+/* ---- TITRE ---- */
 .page-title {
     font-size: 2.3rem;
     text-align: center;
@@ -191,7 +394,6 @@
     box-shadow: 0 18px 35px rgba(122, 97, 255, 0.2);
     border: 1px solid rgba(196, 181, 253, 0.45);
     background: #ffffffee;
-    backdrop-filter: blur(10px);
 }
 
 .violet-card {
@@ -200,14 +402,6 @@
 
 .blue-card {
     background: linear-gradient(135deg, #ffffff, #eef6ff);
-}
-
-.violet-title {
-    color: #6b21a8;
-}
-
-.blue-title {
-    color: #1d4ed8;
 }
 
 /* ---- FORM ---- */
@@ -229,6 +423,13 @@
     color: #6b21a8;
 }
 
+.field-error {
+    color: #b91c1c;
+    font-size: 0.82rem;
+    margin-top: 0.2rem;
+    font-weight: 600;
+}
+
 .input,
 .select-black {
     width: 100%;
@@ -236,27 +437,24 @@
     border-radius: 0.7rem;
     border: 1px solid #dcd8ff;
     background: white;
-    font-size: 0.95rem;
     color: black !important;
 }
 
-.input:focus,
-.select-black:focus {
-    border-color: #7c3aed;
-    outline: none;
-    box-shadow: 0 0 10px rgba(124, 58, 237, 0.3);
+/* ---- INPUT ERROR ---- */
+.input-error {
+    border-color: #dc2626 !important;
+    background: #fff5f5 !important;
 }
 
-/* ---- PRICING METHOD BLOCK ---- */
-.pricing-method-card {
-    margin-top: 1.4rem;
+/* ---- RESULT ---- */
+.result-value {
+    font-size: 2.1rem;
+    font-weight: 800;
+    color: #1d4ed8;
 }
 
-.pricing-method-grid {
-    display: grid;
-    grid-template-columns: 1fr auto;
-    align-items: end;
-    gap: 1rem;
+.result-placeholder {
+    color: #9ca3af;
 }
 
 /* ---- BUTTON ---- */
@@ -267,73 +465,29 @@
     background: linear-gradient(90deg, #7c3aed, #4b0082);
     color: white;
     font-weight: 700;
-    font-size: 1rem;
     cursor: pointer;
 }
 
-.btn-primary:hover {
-    transform: scale(1.03);
-    box-shadow: 0 12px 24px rgba(124, 58, 237, 0.4);
+.btn-primary[disabled] {
+    opacity: 0.5;
+    cursor: not-allowed;
 }
 
-/* ---- RESULT ---- */
-.result-container {
-    margin-top: 1.4rem;
+.pricing-method-card {
+    margin-top: 0.4rem !important;
+    padding-top: 1.2rem !important;
 }
 
-.result-value {
-    font-size: 2.1rem;
-    font-weight: 800;
-    color: #1d4ed8;
-}
-
-.result-placeholder {
-    color: #9ca3af;
-    font-size: 1.1rem;
+.pricing-method-grid {
+    display: grid;
+    grid-template-columns: 1fr auto; 
+    align-items: center;
+    gap: 1rem;
 }
 
 .option-title-strong {
-    font-weight: 900 !important;
-    color: #5a189a !important; /* Violet plus foncé */
-    letter-spacing: 0.5px;
-}
-
-
-.select-custom {
-    appearance: none;
-    padding: 0.7rem;
-    border-radius: 0.7rem;
-    border: 1px solid #dcd8ff;
-    background: white;
-    color: black !important;
-
-    background-image: url("data:image/svg+xml;utf8,<svg fill='black' height='20' viewBox='0 0 24 24' width='20' xmlns='http://www.w3.org/2000/svg'><path d='M7 10l5 5 5-5z'/></svg>");
-    background-repeat: no-repeat;
-    background-position: right 12px center;
-}
-}
-
-.select-custom option {
-    color: black !important;
-    background-color: white !important;
-}
-
-.select-black {
-    color: black !important;
-}
-s
-.select-black option {
-    color: black !important;
-}
-
-/* ---- RESPONSIVE ---- */
-@@media (max-width: 980px) {
-    .pricing-grid-2cols {
-        grid-template-columns: 1fr;
-    }
-    .pricing-method-grid {
-        grid-template-columns: 1fr;
-    }
+    font-weight: 900;
+    color: #5a189a;
 }
 
 </style>

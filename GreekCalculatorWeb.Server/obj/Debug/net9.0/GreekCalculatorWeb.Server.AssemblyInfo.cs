@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("GreekCalculatorWeb.Server")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+825003dbda5787a33b7bd587e0d9bb412581a6b1")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+a6d76072df479928c7037125176145d4dfa82331")]
 [assembly: System.Reflection.AssemblyProductAttribute("GreekCalculatorWeb.Server")]
 [assembly: System.Reflection.AssemblyTitleAttribute("GreekCalculatorWeb.Server")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
