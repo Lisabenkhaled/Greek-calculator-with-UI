@@ -469,42 +469,35 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Lisa Benkhaled\\.nuget\\packages\\": {},
-    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
+    "/Users/lanphuongvu/.nuget/packages/": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Greek-Calculator-main\\GreekCalculatorWeb.Server\\GreekCalculatorWeb.Server.csproj",
+      "projectUniqueName": "/Users/lanphuongvu/Greek-calculator-with-UI-1/GreekCalculatorWeb.Server/GreekCalculatorWeb.Server.csproj",
       "projectName": "GreekCalculatorWeb.Server",
-      "projectPath": "C:\\Greek-Calculator-main\\GreekCalculatorWeb.Server\\GreekCalculatorWeb.Server.csproj",
-      "packagesPath": "C:\\Users\\Lisa Benkhaled\\.nuget\\packages\\",
-      "outputPath": "C:\\Greek-Calculator-main\\GreekCalculatorWeb.Server\\obj\\",
+      "projectPath": "/Users/lanphuongvu/Greek-calculator-with-UI-1/GreekCalculatorWeb.Server/GreekCalculatorWeb.Server.csproj",
+      "packagesPath": "/Users/lanphuongvu/.nuget/packages/",
+      "outputPath": "/Users/lanphuongvu/Greek-calculator-with-UI-1/GreekCalculatorWeb.Server/obj/",
       "projectStyle": "PackageReference",
-      "fallbackFolders": [
-        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-      ],
       "configFilePaths": [
-        "C:\\Users\\Lisa Benkhaled\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        "/Users/lanphuongvu/.nuget/NuGet/NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net9.0"
       ],
       "sources": {
-        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
         "net9.0": {
           "targetAlias": "net9.0",
           "projectReferences": {
-            "C:\\Greek-Calculator-main\\GreekCalculatorWeb\\Shared\\Shared.csproj": {
-              "projectPath": "C:\\Greek-Calculator-main\\GreekCalculatorWeb\\Shared\\Shared.csproj"
+            "/Users/lanphuongvu/Greek-calculator-with-UI-1/GreekCalculatorWeb/Shared/Shared.csproj": {
+              "projectPath": "/Users/lanphuongvu/Greek-calculator-with-UI-1/GreekCalculatorWeb/Shared/Shared.csproj"
             },
-            "C:\\Greek-Calculator-main\\PricingEngine\\PricingEngine.csproj": {
-              "projectPath": "C:\\Greek-Calculator-main\\PricingEngine\\PricingEngine.csproj"
+            "/Users/lanphuongvu/Greek-calculator-with-UI-1/PricingEngine/PricingEngine.csproj": {
+              "projectPath": "/Users/lanphuongvu/Greek-calculator-with-UI-1/PricingEngine/PricingEngine.csproj"
             }
           }
         }
@@ -519,7 +512,7 @@
         "auditLevel": "low",
         "auditMode": "direct"
       },
-      "SdkAnalysisLevel": "10.0.100"
+      "SdkAnalysisLevel": "9.0.300"
     },
     "frameworks": {
       "net9.0": {
@@ -549,7 +542,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.100-rc.1.25451.107/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/9.0.305/PortableRuntimeIdentifierGraph.json"
       }
     }
   }

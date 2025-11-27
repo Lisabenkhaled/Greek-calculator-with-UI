@@ -1,66 +1,139 @@
 @page "/pricing"
+@using Shared.DTO
+@using Shared.Enums
+@using GreekCalculatorWeb.Client.State
 @inject HttpClient Http
+@inject AppState AppState
 
-<h2 class="text-4xl font-bold mb-6 text-center">📈 Pricing</h2>
 
-<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
 
-    <!-- LEFT CARD -->
-    <div class="p-6 rounded-2xl shadow-lg bg-gradient-to-br from-white to-purple-50 border border-purple-200">
-        <h3 class="text-xl font-semibold mb-4 text-purple-700">Option Data</h3>
+<h2 class="page-title">OPTION PRICER</h2>
 
-        <div class="space-y-3">
+<!-- ======== GRID : MARKET + OPTION ========= -->
+<div class="pricing-grid-2cols">
 
-            <input @bind="model.Ticker" placeholder="Ticker (AAPL)" class="input" />
-            <input @bind="model.Spot" type="number" placeholder="Spot price" class="input" />
-            <input @bind="model.Strike" type="number" placeholder="Strike K" class="input" />
-            <input @bind="model.Vol" type="number" placeholder="Volatility σ (0.2)" class="input" />
-            <input @bind="model.Rate" type="number" placeholder="Risk-free rate r (0.03)" class="input" />
-            <input @bind="model.DividendYield" type="number" placeholder="Dividend q (0)" class="input" />
-            <input @bind="model.Maturity" type="number" placeholder="Maturity T (years)" class="input" />
+    <!-- LEFT COLUMN — MARKET -->
+    <div class="card violet-card">
+        <h3 class="card-title violet-title option-title-strong">Marché Paramètres</h3>
 
-            <select @bind="model.OptionType" class="input">
-                <option value="0">Call</option>
-                <option value="1">Put</option>
-            </select>
+        <div class="form-section">
 
-            <select @bind="model.OptionStyle" class="input">
-                <option value="0">European</option>
-                <option value="1">American</option>
-            </select>
+            <div class="field">
+                <label>Ticker</label>
+                <input @bind="model.Ticker" placeholder="AAPL" class="input" />
+            </div>
 
-            <select @bind="model.PricingMethod" class="input">
-                <option value="0">Black-Scholes</option>
-                <option value="1">Binomial</option>
-                <option value="2">Monte Carlo</option>
-                <option value="3">LSM Monte Carlo</option>
-            </select>
+            <div class="field">
+                <label>Spot</label>
+                <input @bind="model.Spot" type="number" class="input" />
+            </div>
+
+            <div class="field">
+                <label>Volatilité (décimal)</label>
+                <input @bind="model.Vol" type="number" class="input" />
+            </div>
+
+            <div class="field">
+                <label>Taux sans risque (décimal)</label>
+                <input @bind="model.Rate" type="number" class="input" />
+            </div>
 
         </div>
+    </div>
 
-        <button class="btn-primary mt-4 w-full" @onclick="Calculate">
-            ▶ Compute Price
+    <!-- RIGHT COLUMN — OPTION -->
+    <div class="card violet-card">
+        <h3 class="card-title violet-title option-title-strong">Option Paramètres</h3>
+
+        <div class="form-section">
+
+            <div class="field">
+                <label>Strike (K)</label>
+                <input @bind="model.Strike" type="number" class="input" />
+            </div>
+
+            <div class="field">
+                <label>Maturité (années)</label>
+                <input @bind="model.Maturity" type="number" class="input" />
+            </div>
+
+            <div class="field">
+                <label>Dividend Yield (décimale)</label>
+                <input @bind="model.DividendYield" type="number" class="input" />
+            </div>
+
+            <div class="field">
+                <label>Option Type</label>
+                <select class="input select-black" @bind="model.OptionType">
+                    <option value="@OptionType.Call">Call</option>
+                    <option value="@OptionType.Put">Put</option>
+                </select>
+            </div>
+
+            <div class="field">
+                <label>Option Style</label>
+                <select class="input select-black" @bind="model.OptionStyle">
+                    <option value="@OptionStyle.European">Européenne</option>
+                    <option value="@OptionStyle.American">Américaine</option>
+                </select>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+<!-- ======== PRICING METHOD BLOCK BELOW ======== -->
+<div class="card violet-card pricing-method-card">
+    <h3 class="card-title violet-title option-title-strong">Pricing Méthode</h3>
+
+    <div class="pricing-method-grid">
+
+        <div class="field">
+            <select class="input select-black" @bind="model.PricingMethod">
+                <option value="@PricingMethod.BlackScholes">Black-Scholes</option>
+                <option value="@PricingMethod.Binomial">Binomial Tree</option>
+                <option value="@PricingMethod.MonteCarlo">Monte Carlo</option>
+                <option value="@PricingMethod.LSMMonteCarlo">LSM Monte Carlo</option>
+            </select>
+        </div>
+
+        <button class="btn-primary" @onclick="Calculate">
+            ▶ Calculer Prix
         </button>
-    </div>
 
-    <!-- RIGHT CARD -->
-    <div class="p-6 rounded-2xl shadow-lg bg-gradient-to-br from-white to-blue-50 border border-blue-200">
-        <h3 class="text-xl font-semibold mb-4 text-blue-700">Résultat</h3>
-
-        @if (PriceResult is not null)
-        {
-            <p class="text-3xl font-bold text-blue-600">💰 @PriceResult EUR</p>
-        }
-        else
-        {
-            <p class="text-gray-400 text-lg">Aucun résultat pour le moment.</p>
-        }
     </div>
+</div>
+
+<!-- ======== RESULT BLOCK ======== -->
+<div class="card blue-card result-container">
+    <h3 class="card-title blue-title option-title-strong">Résultat</h3>
+
+    @if (PriceResult is not null)
+    {
+        <p class="result-value">💰 @PriceResult.Value.ToString("F4")</p>
+    }
+    else
+    {
+        <p class="result-placeholder">Aucun résultat pour le moment.</p>
+    }
 </div>
 
 @code {
 
-    PricingRequest model = new();
+    PricingRequest model = new()
+    {
+        Ticker = "AAPL",
+        Spot = 100,
+        Strike = 100,
+        Vol = 0.20,
+        Rate = 0.05,
+        DividendYield = 0.00,
+        Maturity = 1,
+        OptionType = Shared.Enums.OptionType.Call,
+        OptionStyle = Shared.Enums.OptionStyle.European,
+        PricingMethod = Shared.Enums.PricingMethod.BlackScholes
+    };
+
     double? PriceResult = null;
 
     public async Task Calculate()
@@ -70,10 +143,197 @@
         if (response.IsSuccessStatusCode)
         {
             PriceResult = await response.Content.ReadFromJsonAsync<double>();
+
+            AppState.LastPricing = new PricingRequest
+            {
+                Ticker        = model.Ticker,
+                Spot          = model.Spot,
+                Strike        = model.Strike,
+                Vol           = model.Vol,
+                Rate          = model.Rate,
+                DividendYield = model.DividendYield,
+                Maturity      = model.Maturity,
+                OptionType    = model.OptionType,
+                OptionStyle   = model.OptionStyle,
+                PricingMethod = model.PricingMethod
+            };
         }
         else
         {
             Console.WriteLine("❌ HTTP Error: " + response.StatusCode);
         }
+    } 
+
+}
+
+<style>
+
+/* ---- PAGE TITLE ---- */
+.page-title {
+    font-size: 2.3rem;
+    text-align: center;
+    font-weight: 900;
+    margin-bottom: 1.5rem;
+    color: #4b0082;
+}
+
+/* ---- GRID ---- */
+.pricing-grid-2cols {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.4rem;
+}
+
+/* ---- CARDS ---- */
+.card {
+    padding: 1.6rem;
+    border-radius: 1.4rem;
+    box-shadow: 0 18px 35px rgba(122, 97, 255, 0.2);
+    border: 1px solid rgba(196, 181, 253, 0.45);
+    background: #ffffffee;
+    backdrop-filter: blur(10px);
+}
+
+.violet-card {
+    background: linear-gradient(135deg, #ffffff, #faf0ff);
+}
+
+.blue-card {
+    background: linear-gradient(135deg, #ffffff, #eef6ff);
+}
+
+.violet-title {
+    color: #6b21a8;
+}
+
+.blue-title {
+    color: #1d4ed8;
+}
+
+/* ---- FORM ---- */
+.form-section {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.field {
+    display: flex;
+    flex-direction: column;
+    gap: 0.35rem;
+}
+
+.field label {
+    font-size: 0.9rem;
+    font-weight: 700;
+    color: #6b21a8;
+}
+
+.input,
+.select-black {
+    width: 100%;
+    padding: 0.6rem;
+    border-radius: 0.7rem;
+    border: 1px solid #dcd8ff;
+    background: white;
+    font-size: 0.95rem;
+    color: black !important;
+}
+
+.input:focus,
+.select-black:focus {
+    border-color: #7c3aed;
+    outline: none;
+    box-shadow: 0 0 10px rgba(124, 58, 237, 0.3);
+}
+
+/* ---- PRICING METHOD BLOCK ---- */
+.pricing-method-card {
+    margin-top: 1.4rem;
+}
+
+.pricing-method-grid {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    align-items: end;
+    gap: 1rem;
+}
+
+/* ---- BUTTON ---- */
+.btn-primary {
+    padding: 0.8rem 2.2rem;
+    border-radius: 1rem;
+    border: none;
+    background: linear-gradient(90deg, #7c3aed, #4b0082);
+    color: white;
+    font-weight: 700;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+.btn-primary:hover {
+    transform: scale(1.03);
+    box-shadow: 0 12px 24px rgba(124, 58, 237, 0.4);
+}
+
+/* ---- RESULT ---- */
+.result-container {
+    margin-top: 1.4rem;
+}
+
+.result-value {
+    font-size: 2.1rem;
+    font-weight: 800;
+    color: #1d4ed8;
+}
+
+.result-placeholder {
+    color: #9ca3af;
+    font-size: 1.1rem;
+}
+
+.option-title-strong {
+    font-weight: 900 !important;
+    color: #5a189a !important; /* Violet plus foncé */
+    letter-spacing: 0.5px;
+}
+
+
+.select-custom {
+    appearance: none;
+    padding: 0.7rem;
+    border-radius: 0.7rem;
+    border: 1px solid #dcd8ff;
+    background: white;
+    color: black !important;
+
+    background-image: url("data:image/svg+xml;utf8,<svg fill='black' height='20' viewBox='0 0 24 24' width='20' xmlns='http://www.w3.org/2000/svg'><path d='M7 10l5 5 5-5z'/></svg>");
+    background-repeat: no-repeat;
+    background-position: right 12px center;
+}
+}
+
+.select-custom option {
+    color: black !important;
+    background-color: white !important;
+}
+
+.select-black {
+    color: black !important;
+}
+s
+.select-black option {
+    color: black !important;
+}
+
+/* ---- RESPONSIVE ---- */
+@@media (max-width: 980px) {
+    .pricing-grid-2cols {
+        grid-template-columns: 1fr;
+    }
+    .pricing-method-grid {
+        grid-template-columns: 1fr;
     }
 }
+
+</style>

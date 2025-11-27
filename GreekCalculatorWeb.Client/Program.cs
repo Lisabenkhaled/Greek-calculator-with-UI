@@ -1,6 +1,9 @@
 using Microsoft.AspNetCore.Components.Web;
 using Microsoft.AspNetCore.Components.WebAssembly.Hosting;
 using GreekCalculatorWeb.Client;
+using GreekCalculatorWeb.Client.State;
+
+
 
 namespace GreekCalculatorWeb.Client
 {
@@ -17,7 +20,8 @@ namespace GreekCalculatorWeb.Client
             {
                 BaseAddress = new Uri("http://localhost:5116")
             });
-
+            builder.Services.AddSingleton<AppState>();
+            
             await builder.Build().RunAsync();
         }
     }

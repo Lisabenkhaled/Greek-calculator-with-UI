@@ -1,81 +1,121 @@
-C:\Users\Lisa Benkhaled\OneDrive - Université Paris-Dauphine\Bureau\Greek-Calculator-main\GreekCalculatorWeb.Server\bin\Debug\net9.0\appsettings.Development.json
-C:\Users\Lisa Benkhaled\OneDrive - Université Paris-Dauphine\Bureau\Greek-Calculator-main\GreekCalculatorWeb.Server\bin\Debug\net9.0\appsettings.json
-C:\Users\Lisa Benkhaled\OneDrive - Université Paris-Dauphine\Bureau\Greek-Calculator-main\GreekCalculatorWeb.Server\bin\Debug\net9.0\GreekCalculatorWeb.Server.staticwebassets.endpoints.json
-C:\Users\Lisa Benkhaled\OneDrive - Université Paris-Dauphine\Bureau\Greek-Calculator-main\GreekCalculatorWeb.Server\bin\Debug\net9.0\GreekCalculatorWeb.Server.exe
-C:\Users\Lisa Benkhaled\OneDrive - Université Paris-Dauphine\Bureau\Greek-Calculator-main\GreekCalculatorWeb.Server\bin\Debug\net9.0\GreekCalculatorWeb.Server.deps.json
-C:\Users\Lisa Benkhaled\OneDrive - Université Paris-Dauphine\Bureau\Greek-Calculator-main\GreekCalculatorWeb.Server\bin\Debug\net9.0\GreekCalculatorWeb.Server.runtimeconfig.json
-C:\Users\Lisa Benkhaled\OneDrive - Université Paris-Dauphine\Bureau\Greek-Calculator-main\GreekCalculatorWeb.Server\bin\Debug\net9.0\GreekCalculatorWeb.Server.dll
-C:\Users\Lisa Benkhaled\OneDrive - Université Paris-Dauphine\Bureau\Greek-Calculator-main\GreekCalculatorWeb.Server\bin\Debug\net9.0\GreekCalculatorWeb.Server.pdb
-C:\Users\Lisa Benkhaled\OneDrive - Université Paris-Dauphine\Bureau\Greek-Calculator-main\GreekCalculatorWeb.Server\bin\Debug\net9.0\Microsoft.OpenApi.dll
-C:\Users\Lisa Benkhaled\OneDrive - Université Paris-Dauphine\Bureau\Greek-Calculator-main\GreekCalculatorWeb.Server\bin\Debug\net9.0\Swashbuckle.AspNetCore.Swagger.dll
-C:\Users\Lisa Benkhaled\OneDrive - Université Paris-Dauphine\Bureau\Greek-Calculator-main\GreekCalculatorWeb.Server\bin\Debug\net9.0\Swashbuckle.AspNetCore.SwaggerGen.dll
-C:\Users\Lisa Benkhaled\OneDrive - Université Paris-Dauphine\Bureau\Greek-Calculator-main\GreekCalculatorWeb.Server\bin\Debug\net9.0\Swashbuckle.AspNetCore.SwaggerUI.dll
-C:\Users\Lisa Benkhaled\OneDrive - Université Paris-Dauphine\Bureau\Greek-Calculator-main\GreekCalculatorWeb.Server\bin\Debug\net9.0\PricingEngine.dll
-C:\Users\Lisa Benkhaled\OneDrive - Université Paris-Dauphine\Bureau\Greek-Calculator-main\GreekCalculatorWeb.Server\bin\Debug\net9.0\Shared.dll
-C:\Users\Lisa Benkhaled\OneDrive - Université Paris-Dauphine\Bureau\Greek-Calculator-main\GreekCalculatorWeb.Server\bin\Debug\net9.0\PricingEngine.pdb
-C:\Users\Lisa Benkhaled\OneDrive - Université Paris-Dauphine\Bureau\Greek-Calculator-main\GreekCalculatorWeb.Server\bin\Debug\net9.0\PricingEngine.xml
-C:\Users\Lisa Benkhaled\OneDrive - Université Paris-Dauphine\Bureau\Greek-Calculator-main\GreekCalculatorWeb.Server\bin\Debug\net9.0\Shared.pdb
-C:\Users\Lisa Benkhaled\OneDrive - Université Paris-Dauphine\Bureau\Greek-Calculator-main\GreekCalculatorWeb.Server\obj\Debug\net9.0\GreekCalculatorWeb.Server.csproj.AssemblyReference.cache
-C:\Users\Lisa Benkhaled\OneDrive - Université Paris-Dauphine\Bureau\Greek-Calculator-main\GreekCalculatorWeb.Server\obj\Debug\net9.0\rpswa.dswa.cache.json
-C:\Users\Lisa Benkhaled\OneDrive - Université Paris-Dauphine\Bureau\Greek-Calculator-main\GreekCalculatorWeb.Server\obj\Debug\net9.0\GreekCalculatorWeb.Server.GeneratedMSBuildEditorConfig.editorconfig
-C:\Users\Lisa Benkhaled\OneDrive - Université Paris-Dauphine\Bureau\Greek-Calculator-main\GreekCalculatorWeb.Server\obj\Debug\net9.0\GreekCalculatorWeb.Server.AssemblyInfoInputs.cache
-C:\Users\Lisa Benkhaled\OneDrive - Université Paris-Dauphine\Bureau\Greek-Calculator-main\GreekCalculatorWeb.Server\obj\Debug\net9.0\GreekCalculatorWeb.Server.AssemblyInfo.cs
-C:\Users\Lisa Benkhaled\OneDrive - Université Paris-Dauphine\Bureau\Greek-Calculator-main\GreekCalculatorWeb.Server\obj\Debug\net9.0\GreekCalculatorWeb.Server.csproj.CoreCompileInputs.cache
-C:\Users\Lisa Benkhaled\OneDrive - Université Paris-Dauphine\Bureau\Greek-Calculator-main\GreekCalculatorWeb.Server\obj\Debug\net9.0\GreekCalculatorWeb.Server.MvcApplicationPartsAssemblyInfo.cs
-C:\Users\Lisa Benkhaled\OneDrive - Université Paris-Dauphine\Bureau\Greek-Calculator-main\GreekCalculatorWeb.Server\obj\Debug\net9.0\GreekCalculatorWeb.Server.MvcApplicationPartsAssemblyInfo.cache
-C:\Users\Lisa Benkhaled\OneDrive - Université Paris-Dauphine\Bureau\Greek-Calculator-main\GreekCalculatorWeb.Server\obj\Debug\net9.0\rjimswa.dswa.cache.json
-C:\Users\Lisa Benkhaled\OneDrive - Université Paris-Dauphine\Bureau\Greek-Calculator-main\GreekCalculatorWeb.Server\obj\Debug\net9.0\rjsmrazor.dswa.cache.json
-C:\Users\Lisa Benkhaled\OneDrive - Université Paris-Dauphine\Bureau\Greek-Calculator-main\GreekCalculatorWeb.Server\obj\Debug\net9.0\rjsmcshtml.dswa.cache.json
-C:\Users\Lisa Benkhaled\OneDrive - Université Paris-Dauphine\Bureau\Greek-Calculator-main\GreekCalculatorWeb.Server\obj\Debug\net9.0\scopedcss\bundle\GreekCalculatorWeb.Server.styles.css
-C:\Users\Lisa Benkhaled\OneDrive - Université Paris-Dauphine\Bureau\Greek-Calculator-main\GreekCalculatorWeb.Server\obj\Debug\net9.0\staticwebassets.build.json
-C:\Users\Lisa Benkhaled\OneDrive - Université Paris-Dauphine\Bureau\Greek-Calculator-main\GreekCalculatorWeb.Server\obj\Debug\net9.0\staticwebassets.build.json.cache
-C:\Users\Lisa Benkhaled\OneDrive - Université Paris-Dauphine\Bureau\Greek-Calculator-main\GreekCalculatorWeb.Server\obj\Debug\net9.0\staticwebassets.development.json
-C:\Users\Lisa Benkhaled\OneDrive - Université Paris-Dauphine\Bureau\Greek-Calculator-main\GreekCalculatorWeb.Server\obj\Debug\net9.0\staticwebassets.build.endpoints.json
-C:\Users\Lisa Benkhaled\OneDrive - Université Paris-Dauphine\Bureau\Greek-Calculator-main\GreekCalculatorWeb.Server\obj\Debug\net9.0\swae.build.ex.cache
-C:\Users\Lisa Benkhaled\OneDrive - Université Paris-Dauphine\Bureau\Greek-Calculator-main\GreekCalculatorWeb.Server\obj\Debug\net9.0\GreekCal.21D06931.Up2Date
-C:\Users\Lisa Benkhaled\OneDrive - Université Paris-Dauphine\Bureau\Greek-Calculator-main\GreekCalculatorWeb.Server\obj\Debug\net9.0\GreekCalculatorWeb.Server.dll
-C:\Users\Lisa Benkhaled\OneDrive - Université Paris-Dauphine\Bureau\Greek-Calculator-main\GreekCalculatorWeb.Server\obj\Debug\net9.0\refint\GreekCalculatorWeb.Server.dll
-C:\Users\Lisa Benkhaled\OneDrive - Université Paris-Dauphine\Bureau\Greek-Calculator-main\GreekCalculatorWeb.Server\obj\Debug\net9.0\GreekCalculatorWeb.Server.pdb
-C:\Users\Lisa Benkhaled\OneDrive - Université Paris-Dauphine\Bureau\Greek-Calculator-main\GreekCalculatorWeb.Server\obj\Debug\net9.0\GreekCalculatorWeb.Server.genruntimeconfig.cache
-C:\Users\Lisa Benkhaled\OneDrive - Université Paris-Dauphine\Bureau\Greek-Calculator-main\GreekCalculatorWeb.Server\obj\Debug\net9.0\ref\GreekCalculatorWeb.Server.dll
-C:\Greek-Calculator-main\GreekCalculatorWeb.Server\bin\Debug\net9.0\appsettings.Development.json
-C:\Greek-Calculator-main\GreekCalculatorWeb.Server\bin\Debug\net9.0\appsettings.json
-C:\Greek-Calculator-main\GreekCalculatorWeb.Server\bin\Debug\net9.0\GreekCalculatorWeb.Server.staticwebassets.endpoints.json
-C:\Greek-Calculator-main\GreekCalculatorWeb.Server\bin\Debug\net9.0\GreekCalculatorWeb.Server.exe
-C:\Greek-Calculator-main\GreekCalculatorWeb.Server\bin\Debug\net9.0\GreekCalculatorWeb.Server.deps.json
-C:\Greek-Calculator-main\GreekCalculatorWeb.Server\bin\Debug\net9.0\GreekCalculatorWeb.Server.runtimeconfig.json
-C:\Greek-Calculator-main\GreekCalculatorWeb.Server\bin\Debug\net9.0\GreekCalculatorWeb.Server.dll
-C:\Greek-Calculator-main\GreekCalculatorWeb.Server\bin\Debug\net9.0\GreekCalculatorWeb.Server.pdb
-C:\Greek-Calculator-main\GreekCalculatorWeb.Server\bin\Debug\net9.0\Microsoft.OpenApi.dll
-C:\Greek-Calculator-main\GreekCalculatorWeb.Server\bin\Debug\net9.0\Swashbuckle.AspNetCore.Swagger.dll
-C:\Greek-Calculator-main\GreekCalculatorWeb.Server\bin\Debug\net9.0\Swashbuckle.AspNetCore.SwaggerGen.dll
-C:\Greek-Calculator-main\GreekCalculatorWeb.Server\bin\Debug\net9.0\Swashbuckle.AspNetCore.SwaggerUI.dll
-C:\Greek-Calculator-main\GreekCalculatorWeb.Server\bin\Debug\net9.0\PricingEngine.dll
-C:\Greek-Calculator-main\GreekCalculatorWeb.Server\bin\Debug\net9.0\Shared.dll
-C:\Greek-Calculator-main\GreekCalculatorWeb.Server\bin\Debug\net9.0\PricingEngine.pdb
-C:\Greek-Calculator-main\GreekCalculatorWeb.Server\bin\Debug\net9.0\PricingEngine.xml
-C:\Greek-Calculator-main\GreekCalculatorWeb.Server\bin\Debug\net9.0\Shared.pdb
-C:\Greek-Calculator-main\GreekCalculatorWeb.Server\obj\Debug\net9.0\GreekCalculatorWeb.Server.csproj.AssemblyReference.cache
-C:\Greek-Calculator-main\GreekCalculatorWeb.Server\obj\Debug\net9.0\rpswa.dswa.cache.json
-C:\Greek-Calculator-main\GreekCalculatorWeb.Server\obj\Debug\net9.0\GreekCalculatorWeb.Server.GeneratedMSBuildEditorConfig.editorconfig
-C:\Greek-Calculator-main\GreekCalculatorWeb.Server\obj\Debug\net9.0\GreekCalculatorWeb.Server.AssemblyInfoInputs.cache
-C:\Greek-Calculator-main\GreekCalculatorWeb.Server\obj\Debug\net9.0\GreekCalculatorWeb.Server.AssemblyInfo.cs
-C:\Greek-Calculator-main\GreekCalculatorWeb.Server\obj\Debug\net9.0\GreekCalculatorWeb.Server.csproj.CoreCompileInputs.cache
-C:\Greek-Calculator-main\GreekCalculatorWeb.Server\obj\Debug\net9.0\GreekCalculatorWeb.Server.MvcApplicationPartsAssemblyInfo.cs
-C:\Greek-Calculator-main\GreekCalculatorWeb.Server\obj\Debug\net9.0\GreekCalculatorWeb.Server.MvcApplicationPartsAssemblyInfo.cache
-C:\Greek-Calculator-main\GreekCalculatorWeb.Server\obj\Debug\net9.0\rjimswa.dswa.cache.json
-C:\Greek-Calculator-main\GreekCalculatorWeb.Server\obj\Debug\net9.0\rjsmrazor.dswa.cache.json
-C:\Greek-Calculator-main\GreekCalculatorWeb.Server\obj\Debug\net9.0\rjsmcshtml.dswa.cache.json
-C:\Greek-Calculator-main\GreekCalculatorWeb.Server\obj\Debug\net9.0\scopedcss\bundle\GreekCalculatorWeb.Server.styles.css
-C:\Greek-Calculator-main\GreekCalculatorWeb.Server\obj\Debug\net9.0\staticwebassets.build.json
-C:\Greek-Calculator-main\GreekCalculatorWeb.Server\obj\Debug\net9.0\staticwebassets.build.json.cache
-C:\Greek-Calculator-main\GreekCalculatorWeb.Server\obj\Debug\net9.0\staticwebassets.development.json
-C:\Greek-Calculator-main\GreekCalculatorWeb.Server\obj\Debug\net9.0\staticwebassets.build.endpoints.json
-C:\Greek-Calculator-main\GreekCalculatorWeb.Server\obj\Debug\net9.0\swae.build.ex.cache
-C:\Greek-Calculator-main\GreekCalculatorWeb.Server\obj\Debug\net9.0\GreekCal.21D06931.Up2Date
-C:\Greek-Calculator-main\GreekCalculatorWeb.Server\obj\Debug\net9.0\GreekCalculatorWeb.Server.dll
-C:\Greek-Calculator-main\GreekCalculatorWeb.Server\obj\Debug\net9.0\refint\GreekCalculatorWeb.Server.dll
-C:\Greek-Calculator-main\GreekCalculatorWeb.Server\obj\Debug\net9.0\GreekCalculatorWeb.Server.pdb
-C:\Greek-Calculator-main\GreekCalculatorWeb.Server\obj\Debug\net9.0\GreekCalculatorWeb.Server.genruntimeconfig.cache
-C:\Greek-Calculator-main\GreekCalculatorWeb.Server\obj\Debug\net9.0\ref\GreekCalculatorWeb.Server.dll
-C:\Greek-Calculator-main\GreekCalculatorWeb.Server\obj\Debug\net9.0\GreekCalculatorWeb.Server.sourcelink.json
+C:/Users/Lisa Benkhaled/OneDrive - Université Paris-Dauphine/Bureau/Greek-Calculator-main/GreekCalculatorWeb.Server/bin/Debug/net9.0/appsettings.Development.json
+C:/Users/Lisa Benkhaled/OneDrive - Université Paris-Dauphine/Bureau/Greek-Calculator-main/GreekCalculatorWeb.Server/bin/Debug/net9.0/appsettings.json
+C:/Users/Lisa Benkhaled/OneDrive - Université Paris-Dauphine/Bureau/Greek-Calculator-main/GreekCalculatorWeb.Server/bin/Debug/net9.0/GreekCalculatorWeb.Server.staticwebassets.endpoints.json
+C:/Users/Lisa Benkhaled/OneDrive - Université Paris-Dauphine/Bureau/Greek-Calculator-main/GreekCalculatorWeb.Server/bin/Debug/net9.0/GreekCalculatorWeb.Server.exe
+C:/Users/Lisa Benkhaled/OneDrive - Université Paris-Dauphine/Bureau/Greek-Calculator-main/GreekCalculatorWeb.Server/bin/Debug/net9.0/GreekCalculatorWeb.Server.deps.json
+C:/Users/Lisa Benkhaled/OneDrive - Université Paris-Dauphine/Bureau/Greek-Calculator-main/GreekCalculatorWeb.Server/bin/Debug/net9.0/GreekCalculatorWeb.Server.runtimeconfig.json
+C:/Users/Lisa Benkhaled/OneDrive - Université Paris-Dauphine/Bureau/Greek-Calculator-main/GreekCalculatorWeb.Server/bin/Debug/net9.0/GreekCalculatorWeb.Server.dll
+C:/Users/Lisa Benkhaled/OneDrive - Université Paris-Dauphine/Bureau/Greek-Calculator-main/GreekCalculatorWeb.Server/bin/Debug/net9.0/GreekCalculatorWeb.Server.pdb
+C:/Users/Lisa Benkhaled/OneDrive - Université Paris-Dauphine/Bureau/Greek-Calculator-main/GreekCalculatorWeb.Server/bin/Debug/net9.0/Microsoft.OpenApi.dll
+C:/Users/Lisa Benkhaled/OneDrive - Université Paris-Dauphine/Bureau/Greek-Calculator-main/GreekCalculatorWeb.Server/bin/Debug/net9.0/Swashbuckle.AspNetCore.Swagger.dll
+C:/Users/Lisa Benkhaled/OneDrive - Université Paris-Dauphine/Bureau/Greek-Calculator-main/GreekCalculatorWeb.Server/bin/Debug/net9.0/Swashbuckle.AspNetCore.SwaggerGen.dll
+C:/Users/Lisa Benkhaled/OneDrive - Université Paris-Dauphine/Bureau/Greek-Calculator-main/GreekCalculatorWeb.Server/bin/Debug/net9.0/Swashbuckle.AspNetCore.SwaggerUI.dll
+C:/Users/Lisa Benkhaled/OneDrive - Université Paris-Dauphine/Bureau/Greek-Calculator-main/GreekCalculatorWeb.Server/bin/Debug/net9.0/PricingEngine.dll
+C:/Users/Lisa Benkhaled/OneDrive - Université Paris-Dauphine/Bureau/Greek-Calculator-main/GreekCalculatorWeb.Server/bin/Debug/net9.0/Shared.dll
+C:/Users/Lisa Benkhaled/OneDrive - Université Paris-Dauphine/Bureau/Greek-Calculator-main/GreekCalculatorWeb.Server/bin/Debug/net9.0/PricingEngine.pdb
+C:/Users/Lisa Benkhaled/OneDrive - Université Paris-Dauphine/Bureau/Greek-Calculator-main/GreekCalculatorWeb.Server/bin/Debug/net9.0/PricingEngine.xml
+C:/Users/Lisa Benkhaled/OneDrive - Université Paris-Dauphine/Bureau/Greek-Calculator-main/GreekCalculatorWeb.Server/bin/Debug/net9.0/Shared.pdb
+C:/Users/Lisa Benkhaled/OneDrive - Université Paris-Dauphine/Bureau/Greek-Calculator-main/GreekCalculatorWeb.Server/obj/Debug/net9.0/GreekCalculatorWeb.Server.csproj.AssemblyReference.cache
+C:/Users/Lisa Benkhaled/OneDrive - Université Paris-Dauphine/Bureau/Greek-Calculator-main/GreekCalculatorWeb.Server/obj/Debug/net9.0/rpswa.dswa.cache.json
+C:/Users/Lisa Benkhaled/OneDrive - Université Paris-Dauphine/Bureau/Greek-Calculator-main/GreekCalculatorWeb.Server/obj/Debug/net9.0/GreekCalculatorWeb.Server.GeneratedMSBuildEditorConfig.editorconfig
+C:/Users/Lisa Benkhaled/OneDrive - Université Paris-Dauphine/Bureau/Greek-Calculator-main/GreekCalculatorWeb.Server/obj/Debug/net9.0/GreekCalculatorWeb.Server.AssemblyInfoInputs.cache
+C:/Users/Lisa Benkhaled/OneDrive - Université Paris-Dauphine/Bureau/Greek-Calculator-main/GreekCalculatorWeb.Server/obj/Debug/net9.0/GreekCalculatorWeb.Server.AssemblyInfo.cs
+C:/Users/Lisa Benkhaled/OneDrive - Université Paris-Dauphine/Bureau/Greek-Calculator-main/GreekCalculatorWeb.Server/obj/Debug/net9.0/GreekCalculatorWeb.Server.csproj.CoreCompileInputs.cache
+C:/Users/Lisa Benkhaled/OneDrive - Université Paris-Dauphine/Bureau/Greek-Calculator-main/GreekCalculatorWeb.Server/obj/Debug/net9.0/GreekCalculatorWeb.Server.MvcApplicationPartsAssemblyInfo.cs
+C:/Users/Lisa Benkhaled/OneDrive - Université Paris-Dauphine/Bureau/Greek-Calculator-main/GreekCalculatorWeb.Server/obj/Debug/net9.0/GreekCalculatorWeb.Server.MvcApplicationPartsAssemblyInfo.cache
+C:/Users/Lisa Benkhaled/OneDrive - Université Paris-Dauphine/Bureau/Greek-Calculator-main/GreekCalculatorWeb.Server/obj/Debug/net9.0/rjimswa.dswa.cache.json
+C:/Users/Lisa Benkhaled/OneDrive - Université Paris-Dauphine/Bureau/Greek-Calculator-main/GreekCalculatorWeb.Server/obj/Debug/net9.0/rjsmrazor.dswa.cache.json
+C:/Users/Lisa Benkhaled/OneDrive - Université Paris-Dauphine/Bureau/Greek-Calculator-main/GreekCalculatorWeb.Server/obj/Debug/net9.0/rjsmcshtml.dswa.cache.json
+C:/Users/Lisa Benkhaled/OneDrive - Université Paris-Dauphine/Bureau/Greek-Calculator-main/GreekCalculatorWeb.Server/obj/Debug/net9.0/scopedcss/bundle/GreekCalculatorWeb.Server.styles.css
+C:/Users/Lisa Benkhaled/OneDrive - Université Paris-Dauphine/Bureau/Greek-Calculator-main/GreekCalculatorWeb.Server/obj/Debug/net9.0/staticwebassets.build.json
+C:/Users/Lisa Benkhaled/OneDrive - Université Paris-Dauphine/Bureau/Greek-Calculator-main/GreekCalculatorWeb.Server/obj/Debug/net9.0/staticwebassets.build.json.cache
+C:/Users/Lisa Benkhaled/OneDrive - Université Paris-Dauphine/Bureau/Greek-Calculator-main/GreekCalculatorWeb.Server/obj/Debug/net9.0/staticwebassets.development.json
+C:/Users/Lisa Benkhaled/OneDrive - Université Paris-Dauphine/Bureau/Greek-Calculator-main/GreekCalculatorWeb.Server/obj/Debug/net9.0/staticwebassets.build.endpoints.json
+C:/Users/Lisa Benkhaled/OneDrive - Université Paris-Dauphine/Bureau/Greek-Calculator-main/GreekCalculatorWeb.Server/obj/Debug/net9.0/swae.build.ex.cache
+C:/Users/Lisa Benkhaled/OneDrive - Université Paris-Dauphine/Bureau/Greek-Calculator-main/GreekCalculatorWeb.Server/obj/Debug/net9.0/GreekCal.21D06931.Up2Date
+C:/Users/Lisa Benkhaled/OneDrive - Université Paris-Dauphine/Bureau/Greek-Calculator-main/GreekCalculatorWeb.Server/obj/Debug/net9.0/GreekCalculatorWeb.Server.dll
+C:/Users/Lisa Benkhaled/OneDrive - Université Paris-Dauphine/Bureau/Greek-Calculator-main/GreekCalculatorWeb.Server/obj/Debug/net9.0/refint/GreekCalculatorWeb.Server.dll
+C:/Users/Lisa Benkhaled/OneDrive - Université Paris-Dauphine/Bureau/Greek-Calculator-main/GreekCalculatorWeb.Server/obj/Debug/net9.0/GreekCalculatorWeb.Server.pdb
+C:/Users/Lisa Benkhaled/OneDrive - Université Paris-Dauphine/Bureau/Greek-Calculator-main/GreekCalculatorWeb.Server/obj/Debug/net9.0/GreekCalculatorWeb.Server.genruntimeconfig.cache
+C:/Users/Lisa Benkhaled/OneDrive - Université Paris-Dauphine/Bureau/Greek-Calculator-main/GreekCalculatorWeb.Server/obj/Debug/net9.0/ref/GreekCalculatorWeb.Server.dll
+C:/Greek-Calculator-main/GreekCalculatorWeb.Server/bin/Debug/net9.0/appsettings.Development.json
+C:/Greek-Calculator-main/GreekCalculatorWeb.Server/bin/Debug/net9.0/appsettings.json
+C:/Greek-Calculator-main/GreekCalculatorWeb.Server/bin/Debug/net9.0/GreekCalculatorWeb.Server.staticwebassets.endpoints.json
+C:/Greek-Calculator-main/GreekCalculatorWeb.Server/bin/Debug/net9.0/GreekCalculatorWeb.Server.exe
+C:/Greek-Calculator-main/GreekCalculatorWeb.Server/bin/Debug/net9.0/GreekCalculatorWeb.Server.deps.json
+C:/Greek-Calculator-main/GreekCalculatorWeb.Server/bin/Debug/net9.0/GreekCalculatorWeb.Server.runtimeconfig.json
+C:/Greek-Calculator-main/GreekCalculatorWeb.Server/bin/Debug/net9.0/GreekCalculatorWeb.Server.dll
+C:/Greek-Calculator-main/GreekCalculatorWeb.Server/bin/Debug/net9.0/GreekCalculatorWeb.Server.pdb
+C:/Greek-Calculator-main/GreekCalculatorWeb.Server/bin/Debug/net9.0/Microsoft.OpenApi.dll
+C:/Greek-Calculator-main/GreekCalculatorWeb.Server/bin/Debug/net9.0/Swashbuckle.AspNetCore.Swagger.dll
+C:/Greek-Calculator-main/GreekCalculatorWeb.Server/bin/Debug/net9.0/Swashbuckle.AspNetCore.SwaggerGen.dll
+C:/Greek-Calculator-main/GreekCalculatorWeb.Server/bin/Debug/net9.0/Swashbuckle.AspNetCore.SwaggerUI.dll
+C:/Greek-Calculator-main/GreekCalculatorWeb.Server/bin/Debug/net9.0/PricingEngine.dll
+C:/Greek-Calculator-main/GreekCalculatorWeb.Server/bin/Debug/net9.0/Shared.dll
+C:/Greek-Calculator-main/GreekCalculatorWeb.Server/bin/Debug/net9.0/PricingEngine.pdb
+C:/Greek-Calculator-main/GreekCalculatorWeb.Server/bin/Debug/net9.0/PricingEngine.xml
+C:/Greek-Calculator-main/GreekCalculatorWeb.Server/bin/Debug/net9.0/Shared.pdb
+C:/Greek-Calculator-main/GreekCalculatorWeb.Server/obj/Debug/net9.0/GreekCalculatorWeb.Server.csproj.AssemblyReference.cache
+C:/Greek-Calculator-main/GreekCalculatorWeb.Server/obj/Debug/net9.0/rpswa.dswa.cache.json
+C:/Greek-Calculator-main/GreekCalculatorWeb.Server/obj/Debug/net9.0/GreekCalculatorWeb.Server.GeneratedMSBuildEditorConfig.editorconfig
+C:/Greek-Calculator-main/GreekCalculatorWeb.Server/obj/Debug/net9.0/GreekCalculatorWeb.Server.AssemblyInfoInputs.cache
+C:/Greek-Calculator-main/GreekCalculatorWeb.Server/obj/Debug/net9.0/GreekCalculatorWeb.Server.AssemblyInfo.cs
+C:/Greek-Calculator-main/GreekCalculatorWeb.Server/obj/Debug/net9.0/GreekCalculatorWeb.Server.csproj.CoreCompileInputs.cache
+C:/Greek-Calculator-main/GreekCalculatorWeb.Server/obj/Debug/net9.0/GreekCalculatorWeb.Server.MvcApplicationPartsAssemblyInfo.cs
+C:/Greek-Calculator-main/GreekCalculatorWeb.Server/obj/Debug/net9.0/GreekCalculatorWeb.Server.MvcApplicationPartsAssemblyInfo.cache
+C:/Greek-Calculator-main/GreekCalculatorWeb.Server/obj/Debug/net9.0/rjimswa.dswa.cache.json
+C:/Greek-Calculator-main/GreekCalculatorWeb.Server/obj/Debug/net9.0/rjsmrazor.dswa.cache.json
+C:/Greek-Calculator-main/GreekCalculatorWeb.Server/obj/Debug/net9.0/rjsmcshtml.dswa.cache.json
+C:/Greek-Calculator-main/GreekCalculatorWeb.Server/obj/Debug/net9.0/scopedcss/bundle/GreekCalculatorWeb.Server.styles.css
+C:/Greek-Calculator-main/GreekCalculatorWeb.Server/obj/Debug/net9.0/staticwebassets.build.json
+C:/Greek-Calculator-main/GreekCalculatorWeb.Server/obj/Debug/net9.0/staticwebassets.build.json.cache
+C:/Greek-Calculator-main/GreekCalculatorWeb.Server/obj/Debug/net9.0/staticwebassets.development.json
+C:/Greek-Calculator-main/GreekCalculatorWeb.Server/obj/Debug/net9.0/staticwebassets.build.endpoints.json
+C:/Greek-Calculator-main/GreekCalculatorWeb.Server/obj/Debug/net9.0/swae.build.ex.cache
+C:/Greek-Calculator-main/GreekCalculatorWeb.Server/obj/Debug/net9.0/GreekCal.21D06931.Up2Date
+C:/Greek-Calculator-main/GreekCalculatorWeb.Server/obj/Debug/net9.0/GreekCalculatorWeb.Server.dll
+C:/Greek-Calculator-main/GreekCalculatorWeb.Server/obj/Debug/net9.0/refint/GreekCalculatorWeb.Server.dll
+C:/Greek-Calculator-main/GreekCalculatorWeb.Server/obj/Debug/net9.0/GreekCalculatorWeb.Server.pdb
+C:/Greek-Calculator-main/GreekCalculatorWeb.Server/obj/Debug/net9.0/GreekCalculatorWeb.Server.genruntimeconfig.cache
+C:/Greek-Calculator-main/GreekCalculatorWeb.Server/obj/Debug/net9.0/ref/GreekCalculatorWeb.Server.dll
+C:/Greek-Calculator-main/GreekCalculatorWeb.Server/obj/Debug/net9.0/GreekCalculatorWeb.Server.sourcelink.json
+/Users/lanphuongvu/Greek-calculator-with-UI-1/GreekCalculatorWeb.Server/bin/Debug/net9.0/appsettings.Development.json
+/Users/lanphuongvu/Greek-calculator-with-UI-1/GreekCalculatorWeb.Server/bin/Debug/net9.0/appsettings.json
+/Users/lanphuongvu/Greek-calculator-with-UI-1/GreekCalculatorWeb.Server/bin/Debug/net9.0/GreekCalculatorWeb.Server.staticwebassets.endpoints.json
+/Users/lanphuongvu/Greek-calculator-with-UI-1/GreekCalculatorWeb.Server/bin/Debug/net9.0/GreekCalculatorWeb.Server
+/Users/lanphuongvu/Greek-calculator-with-UI-1/GreekCalculatorWeb.Server/bin/Debug/net9.0/GreekCalculatorWeb.Server.deps.json
+/Users/lanphuongvu/Greek-calculator-with-UI-1/GreekCalculatorWeb.Server/bin/Debug/net9.0/GreekCalculatorWeb.Server.runtimeconfig.json
+/Users/lanphuongvu/Greek-calculator-with-UI-1/GreekCalculatorWeb.Server/bin/Debug/net9.0/GreekCalculatorWeb.Server.dll
+/Users/lanphuongvu/Greek-calculator-with-UI-1/GreekCalculatorWeb.Server/bin/Debug/net9.0/GreekCalculatorWeb.Server.pdb
+/Users/lanphuongvu/Greek-calculator-with-UI-1/GreekCalculatorWeb.Server/bin/Debug/net9.0/Microsoft.OpenApi.dll
+/Users/lanphuongvu/Greek-calculator-with-UI-1/GreekCalculatorWeb.Server/bin/Debug/net9.0/Swashbuckle.AspNetCore.Swagger.dll
+/Users/lanphuongvu/Greek-calculator-with-UI-1/GreekCalculatorWeb.Server/bin/Debug/net9.0/Swashbuckle.AspNetCore.SwaggerGen.dll
+/Users/lanphuongvu/Greek-calculator-with-UI-1/GreekCalculatorWeb.Server/bin/Debug/net9.0/Swashbuckle.AspNetCore.SwaggerUI.dll
+/Users/lanphuongvu/Greek-calculator-with-UI-1/GreekCalculatorWeb.Server/bin/Debug/net9.0/PricingEngine.dll
+/Users/lanphuongvu/Greek-calculator-with-UI-1/GreekCalculatorWeb.Server/bin/Debug/net9.0/Shared.dll
+/Users/lanphuongvu/Greek-calculator-with-UI-1/GreekCalculatorWeb.Server/bin/Debug/net9.0/PricingEngine.pdb
+/Users/lanphuongvu/Greek-calculator-with-UI-1/GreekCalculatorWeb.Server/bin/Debug/net9.0/PricingEngine.xml
+/Users/lanphuongvu/Greek-calculator-with-UI-1/GreekCalculatorWeb.Server/bin/Debug/net9.0/Shared.pdb
+/Users/lanphuongvu/Greek-calculator-with-UI-1/GreekCalculatorWeb.Server/obj/Debug/net9.0/GreekCalculatorWeb.Server.csproj.AssemblyReference.cache
+/Users/lanphuongvu/Greek-calculator-with-UI-1/GreekCalculatorWeb.Server/obj/Debug/net9.0/rpswa.dswa.cache.json
+/Users/lanphuongvu/Greek-calculator-with-UI-1/GreekCalculatorWeb.Server/obj/Debug/net9.0/GreekCalculatorWeb.Server.GeneratedMSBuildEditorConfig.editorconfig
+/Users/lanphuongvu/Greek-calculator-with-UI-1/GreekCalculatorWeb.Server/obj/Debug/net9.0/GreekCalculatorWeb.Server.AssemblyInfoInputs.cache
+/Users/lanphuongvu/Greek-calculator-with-UI-1/GreekCalculatorWeb.Server/obj/Debug/net9.0/GreekCalculatorWeb.Server.AssemblyInfo.cs
+/Users/lanphuongvu/Greek-calculator-with-UI-1/GreekCalculatorWeb.Server/obj/Debug/net9.0/GreekCalculatorWeb.Server.csproj.CoreCompileInputs.cache
+/Users/lanphuongvu/Greek-calculator-with-UI-1/GreekCalculatorWeb.Server/obj/Debug/net9.0/GreekCalculatorWeb.Server.MvcApplicationPartsAssemblyInfo.cs
+/Users/lanphuongvu/Greek-calculator-with-UI-1/GreekCalculatorWeb.Server/obj/Debug/net9.0/GreekCalculatorWeb.Server.MvcApplicationPartsAssemblyInfo.cache
+/Users/lanphuongvu/Greek-calculator-with-UI-1/GreekCalculatorWeb.Server/obj/Debug/net9.0/GreekCalculatorWeb.Server.sourcelink.json
+/Users/lanphuongvu/Greek-calculator-with-UI-1/GreekCalculatorWeb.Server/obj/Debug/net9.0/rjimswa.dswa.cache.json
+/Users/lanphuongvu/Greek-calculator-with-UI-1/GreekCalculatorWeb.Server/obj/Debug/net9.0/rjsmrazor.dswa.cache.json
+/Users/lanphuongvu/Greek-calculator-with-UI-1/GreekCalculatorWeb.Server/obj/Debug/net9.0/rjsmcshtml.dswa.cache.json
+/Users/lanphuongvu/Greek-calculator-with-UI-1/GreekCalculatorWeb.Server/obj/Debug/net9.0/scopedcss/bundle/GreekCalculatorWeb.Server.styles.css
+/Users/lanphuongvu/Greek-calculator-with-UI-1/GreekCalculatorWeb.Server/obj/Debug/net9.0/staticwebassets.build.json
+/Users/lanphuongvu/Greek-calculator-with-UI-1/GreekCalculatorWeb.Server/obj/Debug/net9.0/staticwebassets.build.json.cache
+/Users/lanphuongvu/Greek-calculator-with-UI-1/GreekCalculatorWeb.Server/obj/Debug/net9.0/staticwebassets.development.json
+/Users/lanphuongvu/Greek-calculator-with-UI-1/GreekCalculatorWeb.Server/obj/Debug/net9.0/staticwebassets.build.endpoints.json
+/Users/lanphuongvu/Greek-calculator-with-UI-1/GreekCalculatorWeb.Server/obj/Debug/net9.0/GreekCal.21D06931.Up2Date
+/Users/lanphuongvu/Greek-calculator-with-UI-1/GreekCalculatorWeb.Server/obj/Debug/net9.0/GreekCalculatorWeb.Server.dll
+/Users/lanphuongvu/Greek-calculator-with-UI-1/GreekCalculatorWeb.Server/obj/Debug/net9.0/refint/GreekCalculatorWeb.Server.dll
+/Users/lanphuongvu/Greek-calculator-with-UI-1/GreekCalculatorWeb.Server/obj/Debug/net9.0/GreekCalculatorWeb.Server.pdb
+/Users/lanphuongvu/Greek-calculator-with-UI-1/GreekCalculatorWeb.Server/obj/Debug/net9.0/GreekCalculatorWeb.Server.genruntimeconfig.cache
+/Users/lanphuongvu/Greek-calculator-with-UI-1/GreekCalculatorWeb.Server/obj/Debug/net9.0/ref/GreekCalculatorWeb.Server.dll

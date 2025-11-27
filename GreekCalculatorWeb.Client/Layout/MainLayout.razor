@@ -1,11 +1,120 @@
-﻿@namespace GreekCalculatorWeb.Client.Layout
-@inherits LayoutComponentBase
-<div class="min-h-screen flex bg-gray-100">
+﻿@inherits LayoutComponentBase
 
-    <NavMenu />
+<div class="layout-container">
+    
+    <!-- SIDEBAR -->
+    <nav class="sidebar">
+        <h2 class="menu-title">Menu</h2>
 
-    <main class="flex-1 p-10">
+        <ul class="menu-list">
+            <li>
+                <NavLink href="/"
+                         Match="NavLinkMatch.All"
+                         class="nav-link"
+                         activeClass="nav-link-active">
+                    <span class="icon">🏠</span> Accueil
+                </NavLink>
+            </li>
+
+            <li>
+                <NavLink href="/pricing"
+                         class="nav-link"
+                         activeClass="nav-link-active">
+                    <span class="icon">📈</span> Pricing
+                </NavLink>
+            </li>
+
+            <li>
+                <NavLink href="/greeks"
+                         class="nav-link"
+                         activeClass="nav-link-active">
+                    <span class="icon">⚙️</span> Greeks
+                </NavLink>
+            </li>
+
+            <li>
+                <NavLink href="/charts"
+                         class="nav-link"
+                         activeClass="nav-link-active">
+                    <span class="icon">📊</span> Visualisations
+                </NavLink>
+            </li>
+        </ul>
+    </nav>
+
+    <!-- PAGE CONTENT -->
+    <main class="content">
         @Body
     </main>
 
 </div>
+
+<style>
+    /* --- LAYOUT STRUCTURE --- */
+    .layout-container {
+        display: flex;
+        height: 100vh;
+        width: 100vw;
+        overflow: hidden;
+    }
+
+    .sidebar {
+        width: 16rem;
+        background: white;
+        border-right: 1px solid #e5e7eb;
+        padding: 1.5rem;
+        box-shadow: 2px 0 10px rgba(0,0,0,0.05);
+    }
+
+    .content {
+        flex-grow: 1;
+        padding: 2rem;
+        overflow-y: auto;
+        background: #fafafa;
+    }
+
+    /* --- TITLE --- */
+    .menu-title {
+        font-size: 1.25rem;
+        font-weight: bold;
+        color: #6b5ca8;
+        margin-bottom: 1.5rem;
+    }
+
+    /* --- NAV LINKS --- */
+    .menu-list {
+        list-style: none;
+        padding-left: 0;
+        margin: 0;
+    }
+
+    .nav-link {
+        display: flex;
+        align-items: center;
+        padding: 0.65rem 0.9rem;
+        margin-bottom: 0.35rem;
+        border-radius: 0.75rem;
+        color: #6b5ca8;
+        text-decoration: none;
+        font-size: 0.95rem;
+        font-weight: 600;
+        transition: 0.2s;
+        letter-spacing: 0.3px;
+    }
+
+    .nav-link:hover {
+        background: rgba(124, 58, 237, 0.12);
+        color: #4b0082;
+    }
+
+    .nav-link-active {
+        background: linear-gradient(90deg, #7c3aed, #a855f7);
+        color: white !important;
+        box-shadow: 0 0 12px rgba(124, 58, 237, 0.35);
+    }
+
+    .icon {
+        margin-right: 0.6rem;
+        font-size: 1.1rem;
+    }
+</style>
